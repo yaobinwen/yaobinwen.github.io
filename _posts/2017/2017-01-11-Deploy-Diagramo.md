@@ -1,4 +1,5 @@
 ---
+comments: true
 date: 2017-01-11
 layout: post
 tags: [Tech]
