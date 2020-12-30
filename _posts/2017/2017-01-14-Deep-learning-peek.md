@@ -19,11 +19,11 @@ title: 深度学习初窥
 
 深度学习是一种模拟人脑运作的方法。人脑的基本组成单元是“神经元(neuron)”，不同的神经元之间建立起“连接(connection)”，最终所有神经元和所有的连接构建成一张巨大的“网络(network)”，所以深度学习也采用了类似的构建方式。在一篇SlideShare的PPT[《[DSC 2016] 系列活動：李宏毅 / 一天搞懂深度學習》](http://www.slideshare.net/tw_dsconf/ss-62245351)中，作者[李宏毅博士](http://speech.ee.ntu.edu.tw/~tlkagk/)给出了下面的定义(如无特别说明，截图均来自李博士的SlideShare PPT)：
 
-![neuron](https://raw.githubusercontent.com/yaobinwen/yaobinwen.github.io/master/images/posts/2017/01-14/01_neuron.png)
+![neuron](https://raw.githubusercontent.com/yaobinwen/yaobinwen.github.io/master/images/2017/01-14/01_neuron.png)
 
 a代表的是输入信息(input)，也可以称之为特征(feature)。w代表的是该特征对激发该神经元所起的作用的权重(weight)，也就是说，权重越大，该特征在判断是否要激活该神经元的过程中起到的作用越大。z是在考虑到所有输入之后的最终结果。函数西格玛是用于将结果z映射到一个合适的统一值域上的函数，例如Sigmoid函数可以映射到(0, 1)，最终根据西格玛函数的结果判定是否要激活该神经元。被激活的神经元会进一步导致信息的下一层传导，最终形成整个网络中信息的传递(不过下图似乎显示无论西格玛函数的值是多少，该值都会传递到下一层网络中)：
 
-![neuron network](https://raw.githubusercontent.com/yaobinwen/yaobinwen.github.io/master/images/posts/2017/01-14/02_neuro_network.png)
+![neuron network](https://raw.githubusercontent.com/yaobinwen/yaobinwen.github.io/master/images/2017/01-14/02_neuro_network.png)
 
 而权重值的确定，是调试深度学习网络中很重要的一环。
 

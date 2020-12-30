@@ -90,7 +90,7 @@ By changing the ```index.html``` to ```index.html.old```, we make Apache unable 
 
 Now open a browser and enter ```127.0.0.1``` in the address bar. You should be able to see a ```Welcome to Diagramo installation``` page:
 
-![Welcome to Diagramo installation](https://raw.githubusercontent.com/yaobinwen/yaobinwen.github.io/master/images/posts/2017/01-11/diagramo-step1.png)
+![Welcome to Diagramo installation](https://raw.githubusercontent.com/yaobinwen/yaobinwen.github.io/master/images/2017/01-11/diagramo-step1.png)
 
 ### Step 05: More PHP Configuration
 
@@ -124,7 +124,7 @@ At this moment, all the needed configuration is done. We can finish Diagramo ins
 - Log in with the newly created administrator account.
 - You can start to draw your own diagram.
 
-![Diagramo Editor](https://raw.githubusercontent.com/yaobinwen/yaobinwen.github.io/master/images/posts/2017/01-11/diagramo-editor.png)
+![Diagramo Editor](https://raw.githubusercontent.com/yaobinwen/yaobinwen.github.io/master/images/2017/01-11/diagramo-editor.png)
 
 ## References
 
