@@ -1,8 +1,13 @@
 ## Technology
 
-- [How `os.system()` Deals with Signals](./_posts/2016/2016-03-25-How-system-deals-with-signals.md)
-- [Ubuntu 14.04 ACPI Issue](./_posts/2017/2017-01-05-Ubuntu-ACPI-issue.md)
-- [Deploy Diagramo on Ubuntu 14.04](./_posts/2017/2017-01-11-Deploy-Diagramo.md)
+- 2016
+  - [How `os.system()` Deals with Signals](./_posts/2016/2016-03-25-How-system-deals-with-signals.md)
+- 2017
+  - [Ubuntu 14.04 ACPI Issue](./_posts/2017/2017-01-05-Ubuntu-ACPI-issue.md)
+  - [Deploy Diagramo on Ubuntu 14.04](./_posts/2017/2017-01-11-Deploy-Diagramo.md)
+  - [深度学习初窥](./_posts/2017/2017-01-14-Deep-learning-peek.md)
+  - [Configure `VirtualBox` Network Bandwidth](./_posts/2017/2017-01-16-Configure-VirtualBox-network-bandwidth.md)
+  - [How to Share Static Files in Django](./_posts/2017/2017-02-07-Django-how-to-share-static-files.md)
 
 ## Education
 
