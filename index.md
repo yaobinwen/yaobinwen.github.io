@@ -22,6 +22,10 @@
   - [What is a "whitespace" in Python?](./_posts/2020/2020-12-12-What-is-a-whitespace-in-Python.md)
   - ["BrokenPipeError" in Python?](./_posts/2020/2020-12-22-Python-BrokenPipeError.md)
 
+## Tech Dash
+
+[This page](./tech_dash.md) lists my _Tech Dash_ sessions to study technical subjects.
+
 ## Learning to Learn
 
 - [Synergic Actions: Make the Best Use of Your Daily Life And Work](./_posts/2017/2017-08-07-Synergic-actions.md)
