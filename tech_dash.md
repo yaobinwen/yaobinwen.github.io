@@ -37,6 +37,8 @@ Below is the list of sources I am using (incomplete as of 2021-01-23):
   - [linux.com](https://www.linux.com/): "Linux.com is the go-to resource for open source professionals to learn about the latest in Linux and open source technology, careers, best practices, and industry trends."
     - To see the articles for a particular topic or audience, use the `TOPIC` and `AUDIENCE` drop lists.
   - [The Linux Kernel documentation](https://www.kernel.org/doc/html/latest/)
+- [Bits from Debian: the official Debian blog](https://bits.debian.org/)
+- [Ubuntu Blog](https://ubuntu.com/blog)
 
 ## Tech Dash: Christmas 2020 / New Year 2021
 
