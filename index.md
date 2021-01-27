@@ -31,6 +31,7 @@
 - [Synergic Actions: Make the Best Use of Your Daily Life And Work](./_posts/2017/2017-08-07-Synergic-actions.md)
 - [Book Summary: An Illustrated Book of Bad Arguments](./_posts/2017/2017-09-09-Bad-Arguments.md)
 - [读书笔记：《好好学习》](./_posts/2017/2017-09-09-Study-Wisely.md)
+- [Rethinking of Software Development Learning](./_posts/2021/2021-01-27-Rethinking-of-software-dev-learning.md)
 
 ## Education
 
