@@ -4,3 +4,5 @@
 |:-----------:|:------------|
 | [CTF Time](https://ctftime.org/) | A website that collects CTF (Capture The Flag) competitions and teams, mainly for information security |
 | [Book: Policy Routing With Linux](http://www.policyrouting.org/PolicyRoutingBook/ONLINE/TOC.html) ||
+| [Blog: The Valuable Dev](https://thevaluable.dev/) | By [Matthieu Cneude](https://github.com/Phantas0s) who maintains a [healthy daily routine](https://thevaluable.dev/page/about/). |
+| [Book: The Personal MBA](https://personalmba.com/) ||
