@@ -21,6 +21,8 @@
 - 2020
   - [What is a "whitespace" in Python?](./_posts/2020/2020-12-12-What-is-a-whitespace-in-Python.md)
   - ["BrokenPipeError" in Python?](./_posts/2020/2020-12-22-Python-BrokenPipeError.md)
+- 2021
+  - [Ansible: How to Debug](./_posts/2021/2021-01-29-Ansible-how-to-debug.md)
 
 ## Tech Dash
 
