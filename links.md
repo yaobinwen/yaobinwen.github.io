@@ -6,3 +6,4 @@
 | [Book: Policy Routing With Linux](http://www.policyrouting.org/PolicyRoutingBook/ONLINE/TOC.html) ||
 | [Blog: The Valuable Dev](https://thevaluable.dev/) | By [Matthieu Cneude](https://github.com/Phantas0s) who maintains a [healthy daily routine](https://thevaluable.dev/page/about/). |
 | [Book: The Personal MBA](https://personalmba.com/) ||
+| [The History of the Web](https://thehistoryoftheweb.com/) | A side project by [Jay Hoffmann](https://twitter.com/jay_hoffmann). |
