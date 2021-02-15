@@ -24,6 +24,7 @@
 - 2021
   - [Ansible: How to Debug](./_posts/2021/2021-01-29-Ansible-how-to-debug.md)
   - [Ansible Vault: Understanding How to Use Multiple Passwords](./_posts/2021/2021-02-08-Ansible-vault-multiple-passwords.md)
+  - [Thinking in Security](./_posts/2021/2021-02-14-Thinking-in-security.md)
 
 ## Tech Dash
 
