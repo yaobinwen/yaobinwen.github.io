@@ -40,6 +40,17 @@ Below is the list of sources I am using (incomplete as of 2021-01-23):
 - [Bits from Debian: the official Debian blog](https://bits.debian.org/)
 - [Ubuntu Blog](https://ubuntu.com/blog)
 
+## Tech Dash: Chinese New Year 2021 (02/13/2021 ~ 02/15/2021)
+
+- [x] First of all, something fun: [Particubes](https://docs.particubes.com/)
+- [x] Security:
+  - [x] [Thinking in Security](https://yaobinwen.github.io/2021/02/14/Thinking-in-security.html)
+- [x] Microservices
+  - [x] Building Microservices: Chapter 05
+- [x] Racket
+  - [x] [Why Racket? Why Lisp?](https://beautifulracket.com/appendix/why-racket-why-lisp.html)
+  - [x] [Why language-oriented programming? Why Racket?](https://beautifulracket.com/appendix/why-lop-why-racket.html)
+
 ## Tech Dash: 2021-01-23 Weekend
 
 During this weekend, I studied three subjects: virtual ethernet; network namespace; Docker networking. I read the following articles:
