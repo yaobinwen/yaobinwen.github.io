@@ -26,10 +26,6 @@
   - [Ansible Vault: Understanding How to Use Multiple Passwords](./_posts/2021/2021-02-08-Ansible-vault-multiple-passwords.md)
   - [Thinking in Security](./_posts/2021/2021-02-14-Thinking-in-security.md)
 
-## Tech Dash
-
-[This page](./tech_dash.md) lists my _Tech Dash_ sessions to study technical subjects.
-
 ## Learning to Learn
 
 - [Synergic Actions: Make the Best Use of Your Daily Life And Work](./_posts/2017/2017-08-07-Synergic-actions.md)
