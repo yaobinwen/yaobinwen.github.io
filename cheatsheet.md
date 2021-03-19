@@ -1,5 +1,10 @@
 # Cheat Sheet
 
+## FAL (Frequently Accessed Links)
+
+[Linux: Filesystem Hierarchy Standard](https://refspecs.linuxfoundation.org/fhs.shtml):
+- [FHS 3 HTML (multi-page)](https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html)
+
 ## Python
 
 ### Install in "Development Mode"
