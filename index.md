@@ -35,7 +35,7 @@
 
 ## Cheat Sheet
 
-My [cheat sheet](./cheatsheet.md).
+My [cheat sheet](./cheatsheets/README.md).
 
 ## Education
 

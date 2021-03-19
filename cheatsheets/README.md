@@ -5,6 +5,22 @@
 [Linux: Filesystem Hierarchy Standard](https://refspecs.linuxfoundation.org/fhs.shtml):
 - [FHS 3 HTML (multi-page)](https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html)
 
+## Ansible
+
+The [Ansible document "Special Variables"](https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html) doesn't list the details of some of the special variables. Here are some concrete examples for reference:
+- `hostvars`:
+  - A dictionary/map with all the hosts in inventory and variables assigned to them.
+  - [`hostvars.json`](./Ansible/hostvars.json)
+- `groups`:
+  - A dictionary/map with all the groups in inventory and each group has the list of hosts that belong to it.
+  - [`groups.json`](./Ansible/groups.json)
+- `group_names`:
+  - List of groups the current host is part of.
+  - [`group_names.json`](./Ansible/group_names.json)
+- `inventory_hostname`:
+  - The inventory name for the ‘current’ host being iterated over in the play.
+  - [`inventory_hostname.json`](./Ansible/inventory_hostname.json)
+
 ## Python
 
 ### Install in "Development Mode"

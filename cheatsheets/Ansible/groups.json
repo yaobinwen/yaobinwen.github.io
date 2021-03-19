@@ -1,0 +1,22 @@
+{
+  "groups": {
+      "all": [
+          "localhost",
+          "dell-precision-7510",
+          "dell-precision-m4800"
+      ],
+      "dns_clients": [
+          "dell-precision-7510",
+          "dell-precision-m4800"
+      ],
+      "dns_primary_servers": [
+          "dell-precision-7510"
+      ],
+      "dns_secondary_servers": [
+          "dell-precision-m4800"
+      ],
+      "ungrouped": [
+          "localhost"
+      ]
+  }
+}
