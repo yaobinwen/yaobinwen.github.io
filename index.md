@@ -27,6 +27,7 @@
   - [Thinking in Security](./_posts/2021/2021-02-14-Thinking-in-security.md)
   - [SSH: Too many authentication failures](_posts/2021/2021-03-23-SSH-too-many-auth-failures.md)
   - [SSH: Uniqueness of X509 Certificates Serial Numbers](_posts/2021/2021-03-26-SSH-X509-cert-serial-numbers.md)
+  - [Software Reuse](_posts/2021/2021-03-30-Software-reuse.md)
 
 ## Learning to Learn
 
