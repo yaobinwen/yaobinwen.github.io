@@ -100,3 +100,9 @@ BaseException
            +-- BytesWarning
            +-- ResourceWarning
 ```
+
+## SSH
+
+- Remove a known (but out-dated) host key: `ssh-keygen -f "/home/ywen/.ssh/known_hosts" -R "10.0.0.10"`.
+- Sign a certificate: `ssh-keygen -s <path-to-CA-private-key> -I <identity> -n <principal> -V +1w -z <serial-no> <path-to-user-public-key>`
+  - Example: `ssh-keygen -s ~/my_ca/private.key -I ywen-m4800 -n root-everywhere -V +1w -z 4800 "$HOME/.ssh/id_ecdsa.pub"`.
