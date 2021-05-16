@@ -7,6 +7,13 @@
 
 ## Ansible
 
+`ansible_facts` has [facts about the remote system](https://docs.ansible.com/ansible/latest/user_guide/playbooks_vars_facts.html#ansible-facts):
+- Run `ansible <hostname> -m ansible.builtin.setup` to print the _raw_ information gathered for the remote system.
+  - The raw information can be accessed directly, e.g., `"{{ansible_system}}"`.
+  - It can be accessed via the variable `ansible_facts`, too: `{{ansible_facts.system}}` which is equivalent to `"{{ansible_system}}"`.
+- Run `ansible <hostname> -m ansible.builtin.setup -a "filter=ansible_local"` to print just the information of the specified part.
+- Click [`ansible_facts_raw.json`](./Ansible/ansible_facts_raw.json) to see a sample (from running `ansible.builtin.setup`).
+
 The [Ansible document "Special Variables"](https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html) doesn't list the details of some of the special variables. Here are some concrete examples for reference:
 - `hostvars`:
   - A dictionary/map with all the hosts in inventory and variables assigned to them.
