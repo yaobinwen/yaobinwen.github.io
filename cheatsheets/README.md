@@ -28,6 +28,15 @@ The [Ansible document "Special Variables"](https://docs.ansible.com/ansible/late
   - The inventory name for the ‘current’ host being iterated over in the play.
   - [`inventory_hostname.json`](./Ansible/inventory_hostname.json)
 
+## Git
+
+### Git Configuration
+
+Use `vim` as the editor: `git config --global core.editor "vim"`
+
+Use the specified GPG key to sign the commits: `git config --global user.signingKey "0xA788F5525815CBC6DF91A36E851F38D2609E665D"  # use key's fingerprint`
+- Then run `git commit -S ...` to sign the commit.
+
 ## Python
 
 ### Install in "Development Mode"
