@@ -37,6 +37,10 @@ Use `vim` as the editor: `git config --global core.editor "vim"`
 Use the specified GPG key to sign the commits: `git config --global user.signingKey "0xA788F5525815CBC6DF91A36E851F38D2609E665D"  # use key's fingerprint`
 - Then run `git commit -S ...` to sign the commit.
 
+## Go
+
+For commonly used syntax, see [here](./Go.md).
+
 ## Python
 
 ### Install in "Development Mode"
