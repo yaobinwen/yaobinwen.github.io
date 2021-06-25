@@ -122,3 +122,15 @@ BaseException
 - Remove a known (but out-dated) host key: `ssh-keygen -f "/home/ywen/.ssh/known_hosts" -R "10.0.0.10"`.
 - Sign a certificate: `ssh-keygen -s <path-to-CA-private-key> -I <identity> -n <principal> -V +1w -z <serial-no> <path-to-user-public-key>`
   - Example: `ssh-keygen -s ~/my_ca/private.key -I ywen-m4800 -n root-everywhere -V +1w -z 4800 "$HOME/.ssh/id_ecdsa.pub"`.
+
+## Ubuntu
+
+### List the default installed packages
+
+See [this answer](https://askubuntu.com/a/48894/514711) for reference. The release server maintains the `.manifest` files that list all the installed packages. Follow the steps below to find these files:
+
+1. Go to `http://releases.ubuntu.com/`.
+2. Scroll down to the bottom of the page to see the list of folders for different releases.
+3. Find the appropriate release, e.g., [`21.04`](http://releases.ubuntu.com/21.04/).
+4. Scroll down to the bottom of the page to see the list of files.
+5. The manifest files for Desktop and Server are [`ubuntu-21.04-desktop-amd64.manifest`](http://releases.ubuntu.com/21.04/ubuntu-21.04-desktop-amd64.manifest) and [`ubuntu-21.04-live-server-amd64.manifest`](http://releases.ubuntu.com/21.04/ubuntu-21.04-live-server-amd64.manifest), respectively.
