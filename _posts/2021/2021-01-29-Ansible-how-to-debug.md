@@ -101,14 +101,14 @@ In my case, the saved module file (`AnsiballZ_stat.py`) is shown in the followin
 
 Then I could `cd /home/vagrant/.ansible/tmp/ansible-tmp-1611960114.27-23625-278355414153003/` to find the bundled `stat` module.
 
-Run `./AnsiballZ_stat.py explode`:
+In order to debug the module, **firstly, I needed to extract the content of the bundled `stat` module by running `./AnsiballZ_stat.py explode`**:
 
 ```
 Module expanded into:
 /home/vagrant/.ansible/tmp/ansible-tmp-1611960114.27-23625-278355414153003/debug_dir
 ```
 
-The directory has the following hierarchy:
+The directory `debug_dir` has the following hierarchy:
 
 ```
 ├── AnsiballZ_stat.py
@@ -160,7 +160,7 @@ The important files are:
 - `./debug_dir/ansible/module_utils`: The supportive Ansible modules, usually built-in ones.
 - `./debug_dir/args`: The `stat` module's input arguments. I could modify this file to change the input arguments.
 
-Run `./AnsiballZ_stat.py execute | jq` to run the `stat` module with `args`.
+**Then I could run `./AnsiballZ_stat.py execute | jq`** to run the `stat` module with the arguments in `args`. I could modify the contents of the files to change the behaviors or print more details for debugging purpose.
 
 However, when running `./AnsiballZ_stat.py execute | jq` directly, I ran it in the non-privileged user mode under which the `Permission denied` issue didn't exist.
 
