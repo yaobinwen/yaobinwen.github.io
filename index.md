@@ -28,6 +28,7 @@
   - [SSH: Too many authentication failures](_posts/2021/2021-03-23-SSH-too-many-auth-failures.md)
   - [SSH: Uniqueness of X509 Certificates Serial Numbers](_posts/2021/2021-03-26-SSH-X509-cert-serial-numbers.md)
   - [Software Reuse](_posts/2021/2021-03-30-Software-reuse.md)
+  - ["Compiler proper" and Communication](./_posts/2021/2021-10-07-Compiler-proper-and-communication.md)
 
 ## Learning to Learn
 
