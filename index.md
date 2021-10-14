@@ -36,7 +36,3 @@
 - [Book Summary: An Illustrated Book of Bad Arguments](./_posts/2017/2017-09-09-Bad-Arguments.md)
 - [读书笔记：《好好学习》](./_posts/2017/2017-09-09-Study-Wisely.md)
 - [Rethinking of Software Development Learning](./_posts/2021/2021-01-27-Rethinking-of-software-dev-learning.md)
-
-## Education
-
-- [Life Club](https://lifeclub.org/) focuses on delivering life skills that work for people in the modern societies. Frankly speaking, I don't know how well they do yet (as of 2020-12-29) because I haven't read much of their writing. But their goals align with mine in the way that I also think the current school curriculum is out-dated and we need to deliver a new set of courses that help develop a person to a better extent.
