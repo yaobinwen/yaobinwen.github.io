@@ -25,6 +25,11 @@
 - 2018
   - [How to Setup Jenkins to Access Local Git Repository](./_posts/2018/2018-08-06-Jenkins-setup-for-local-git-repo.md)
 
+## Git
+
+- 2021
+  - [A Process for Complicated Git Merges](./_posts/2021/2021-10-14-A-process-for-complicated-git-merges.md)
+
 ## Linux (Mostly Ubuntu)
 
 - 2017
