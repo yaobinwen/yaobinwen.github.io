@@ -37,6 +37,8 @@
   - [How to Fix "Package is in a very bad inconsistent state" Error?](./_posts/2017/2017-02-13-Fix-package-very-bad-inconsistent-state.md)
 - 2018
   - [How to Debug Debian Packages](./_posts/2018/2018-07-31-Debug-deb-pkg.md)
+- 2021
+  - [Finding Ubuntu Packaging for Debian Source Code](./_posts/2021/2021-12-04-Finding-Ubuntu-packaging-for-Debian-source-code.md)
 
 ## Python
 
