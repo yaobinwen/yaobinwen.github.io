@@ -3,12 +3,12 @@ comments: true
 date: 2021-01-29
 layout: post
 tags: [Tech]
-title: "Ansible: How to Debug"
+title: "Ansible: How to Debug a Problematic Module"
 ---
 
 Typicall, you don't debug a particular task or module in the first place. Instead, you test your playbook but encounter issues. As you debug further into the playbook, you may need to debug into a task or a module.
 
-## Scenario
+## 1. Scenario
 
 Today, I encountered an issue that led me to debugging into the `stat` module. Here is how to reproduce the scenario (on Ubuntu 18.04 Desktop):
 
@@ -87,7 +87,7 @@ fatal: [localhost]: FAILED! => {
 
 I couldn't figure out why I got a "Permission denied", so I thought I'd better debug into the Ansible `stat` module to see what was going on. That was my motive to learn how to debug a module.
 
-## Debugging Modules
+## 2. Debugging Modules
 
 I used [1] as the primary reference to learning module debugging.
 
@@ -209,7 +209,7 @@ And the output would be the following, with the "Permission denied" error messag
 }
 ```
 
-## Use `ansible` to Reproduce
+## 3. Use `ansible` to Reproduce
 
 Running `ansible -vvv -e "ansible_become=yes" -m stat -a "path=/var/cache/hello.txt follow=yes" localhost` coudl also reproduce the error with a lot of details:
 
@@ -271,6 +271,36 @@ localhost | FAILED! => {
 }
 ```
 
+## 4. Other Methods
+
+### 4.1 Environment Variable `ANSIBLE_DEBUG`
+
+The `debug` option in the `[default]` section [2] can configure if Ansible should print the debug output. Note the "debug output" does not refer to the output by [the `debug` module](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/debug_module.html) but the log messages that are printed out by `display.debug(...)` in Ansible's source code, such as the following one:
+
+```python
+    @classmethod
+    def cli_executor(cls, args=None):
+        # ...
+
+        try:
+            display.debug("starting run")
+```
+
+The quick way to enable this on the command line is to run `export ANSIBLE_DEBUG=1` followed by the Ansible command. Note that [2] warns "Debug output can also **include secret information despite no_log settings being enabled**, which means debug mode should not be used in production."
+
+Note that the color of the debug output can be configured by [`COLOR_DEBUG`](https://docs.ansible.com/ansible/latest/reference_appendices/config.html#color-debug).
+
+### 4.2 CLI Options `--start-at-task` And `--step`
+
+Refer to [3].
+
+### 4.3 Using the Task Debugger
+
+Refer to [4].
+
 ## References
 
 - [1] [Ansible: Debugging modules](https://docs.ansible.com/ansible/latest/dev_guide/debugging.html) as part of the Developer Guide.
+- [2] [Ansible Configuration Settings: DEFAULT_DEBUG](https://docs.ansible.com/ansible/latest/reference_appendices/config.html#default-debug)
+- [3] [Executing playbooks for troubleshooting](https://docs.ansible.com/ansible/latest/user_guide/playbooks_startnstep.html)
+- [4] [Debugging tasks](https://docs.ansible.com/ansible/latest/user_guide/playbooks_debugger.html)
