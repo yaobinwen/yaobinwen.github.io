@@ -19,6 +19,8 @@
 - 2021
   - [Ansible: How to Debug a Problematic Module](./_posts/2021/2021-01-29-Ansible-how-to-debug-a-problematic-module.md)
   - [Ansible Vault: Understanding How to Use Multiple Passwords](./_posts/2021/2021-02-08-Ansible-vault-multiple-passwords.md)
+- 2022
+  - [Ansible: Add elements to list](./_posts/2022/2022-01-06-Ansible-add-elements-to-list.md)
 
 ## DevSecOps
 
