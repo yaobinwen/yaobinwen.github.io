@@ -21,6 +21,7 @@
   - [Ansible Vault: Understanding How to Use Multiple Passwords](./_posts/2021/2021-02-08-Ansible-vault-multiple-passwords.md)
 - 2022
   - [Ansible: Add elements to list](./_posts/2022/2022-01-06-Ansible-add-elements-to-list.md)
+  - [Ansible: Understanding the `subelements` lookup (`with_subelements`)](./_posts/2022/2022-01-07-Ansible-subelements.md)
 
 ## DevSecOps
 
