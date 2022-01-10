@@ -22,6 +22,7 @@
 - 2022
   - [Ansible: Add elements to list](./_posts/2022/2022-01-06-Ansible-add-elements-to-list.md)
   - [Ansible: Understanding the `subelements` lookup (`with_subelements`)](./_posts/2022/2022-01-07-Ansible-subelements.md)
+  - [Ansible: How to unit test module without using `pytest`](./_posts/2022/2022-01-09-Ansible-module-unit-tests.md)
 
 ## DevSecOps
 
