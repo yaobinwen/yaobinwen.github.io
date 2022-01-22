@@ -13,6 +13,8 @@
 - 2021
   - [Software Reuse](_posts/2021/2021-03-30-Software-reuse.md)
   - ["Compiler proper" and Communication](./_posts/2021/2021-10-07-Compiler-proper-and-communication.md)
+- 2022
+  - [关于技术型成长的一些建议](./_posts/2022/2022-01-22-Technical-growth.md)
 
 ## Ansible
 
