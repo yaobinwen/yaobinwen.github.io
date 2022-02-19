@@ -15,6 +15,7 @@
   - ["Compiler proper" and Communication](./_posts/2021/2021-10-07-Compiler-proper-and-communication.md)
 - 2022
   - [关于技术型成长的一些建议](./_posts/2022/2022-01-22-Technical-growth.md)
+  - [Why does Google Chrome automatically redirect `http://app` to `https://app` but doesn't do that to `http://app2` or `http://napp`?](./_posts/2022/2022-02-18-Google-Chrome-http-app.md)
 
 ## Ansible
 
