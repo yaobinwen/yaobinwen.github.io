@@ -66,6 +66,8 @@
   - [Thinking in Security](./_posts/2021/2021-02-14-Thinking-in-security.md)
   - [SSH: Too many authentication failures](_posts/2021/2021-03-23-SSH-too-many-auth-failures.md)
   - [SSH: Uniqueness of X509 Certificates Serial Numbers](_posts/2021/2021-03-26-SSH-X509-cert-serial-numbers.md)
+- 2022
+  - [Forwarding `gpg-agent` to a Remote System over SSH](./_posts/2022/2022-02-20-Forwarding-gpg-agent.md)
 
 ## Learning to Learn
 
