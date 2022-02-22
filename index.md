@@ -1,21 +1,10 @@
-## Technology (General)
+## General Technology
 
-- 2016
-  - [老生常谈：软件开发要以用户为中心](./_posts/2016/2016-03-29-Tasks-should-be-user-centric.md)
 - 2017
   - [Deploy Diagramo on Ubuntu 14.04](./_posts/2017/2017-01-11-Deploy-Diagramo.md)
   - [深度学习初窥](./_posts/2017/2017-01-14-Deep-learning-peek.md)
-  - [Configure `VirtualBox` Network Bandwidth](./_posts/2017/2017-01-16-Configure-VirtualBox-network-bandwidth.md)
   - [How to Share Static Files in Django](./_posts/2017/2017-02-07-Django-how-to-share-static-files.md)
   - [How to Embed Django Template Code in Jekyll](./_posts/2017/2017-02-08-Django-code-to-jekyll.md)
-- 2018
-  - [Verifying the Assumptions Before Implementing the Solution](./_posts/2018/2018-04-05-Verify-assumptions.md)
-- 2021
-  - [Software Reuse](./_posts/2021/2021-03-30-Software-reuse.md)
-  - ["Compiler proper" and Communication](./_posts/2021/2021-10-07-Compiler-proper-and-communication.md)
-- 2022
-  - [关于技术型成长的一些建议](./_posts/2022/2022-01-22-Technical-growth.md)
-  - [Why does Google Chrome automatically redirect `http://app` to `https://app` but doesn't do that to `http://app2` or `http://napp`?](./_posts/2022/2022-02-18-Google-Chrome-http-app.md)
 
 ## Ansible
 
@@ -50,6 +39,13 @@
 - 2022
   - [Recover Reprepro Corrupted/Broken `.db` Files](./_posts/2022/2022-02-21-Recover-reprepro-db.md)
 
+## Network & Web
+
+- 2017
+  - [Configure `VirtualBox` Network Bandwidth](./_posts/2017/2017-01-16-Configure-VirtualBox-network-bandwidth.md)
+- 2022
+  - [Why does Google Chrome automatically redirect `http://app` to `https://app` but doesn't do that to `http://app2` or `http://napp`?](./_posts/2022/2022-02-18-Google-Chrome-http-app.md)
+
 ## Python
 
 - 2016
@@ -71,6 +67,16 @@
 - 2022
   - [Forwarding `gpg-agent` to a Remote System over SSH](./_posts/2022/2022-02-20-Forwarding-gpg-agent.md)
 
+## Software Engineering
+
+- 2016
+  - [老生常谈：软件开发要以用户为中心](./_posts/2016/2016-03-29-Tasks-should-be-user-centric.md)
+- 2018
+  - [Verifying the Assumptions Before Implementing the Solution](./_posts/2018/2018-04-05-Verify-assumptions.md)
+- 2021
+  - ["Compiler proper" and Communication](./_posts/2021/2021-10-07-Compiler-proper-and-communication.md)
+  - [Software Reuse](./_posts/2021/2021-03-30-Software-reuse.md)
+
 ## Learning to Learn
 
 - 2017
@@ -79,3 +85,5 @@
   - [读书笔记：《好好学习》](./_posts/2017/2017-09-09-Study-Wisely.md)
 - 2021
   - [Rethinking of Software Development Learning](./_posts/2021/2021-01-27-Rethinking-of-software-dev-learning.md)
+- 2022
+  - [关于技术型成长的一些建议](./_posts/2022/2022-01-22-Technical-growth.md)
