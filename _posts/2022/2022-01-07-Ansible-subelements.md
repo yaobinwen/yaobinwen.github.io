@@ -88,7 +88,7 @@ Family=Sanders Child=Pete Age=12
 Family=Sanders Child=Sara Age=17
 ```
 
-Refer to [subelements-lookup.yml](https://github.com/yaobinwen/ansible/blob/devel/demo/ansible/subelements-lookup.yml) to run the example code.
+Refer to [subelements-lookup.yml](https://github.com/yaobinwen/robin_on_rails/blob/master/Ansible/demo/ansible/subelements-lookup.yml) to run the example code.
 
 References:
 - [1] [ansible.builtin.subelements – traverse nested key from a list of dictionaries](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/subelements_lookup.html)

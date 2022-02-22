@@ -14,7 +14,7 @@ Therefore, usually one can only test the functions that the Ansible module calls
 
 However, sometimes the project may not use `pytest` as the unit testing tool. Instead, the project may use Python's built-in `unittest` module. In this case, we wouldn't be able to use the function `patch_ansible_module()`.
 
-But I implemented [this demo](https://github.com/yaobinwen/ansible/blob/devel/demo/ansible/roles/unittest-module/library/test_my_test.py) to show how to unit test an `AnsibleModule` in real mode and check mode using Python's `unittest` module. Basically,
+But I implemented [this demo](https://github.com/yaobinwen/robin_on_rails/blob/master/Ansible/demo/ansible/roles/unittest-module/library/test_my_test.py) to show how to unit test an `AnsibleModule` in real mode and check mode using Python's `unittest` module. Basically,
 
 - Implement `class MyAnsibleModule(AnsibleModuleBasic.AnsibleModule)` in order to change the behaviors of `exit_json()` and `fail_json()` so, when called, they don't actually quit the test program.
 - Use `mock` to replace the real `AnsibleModule` with `MyAnsibleModule`.

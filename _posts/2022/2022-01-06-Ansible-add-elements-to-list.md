@@ -75,7 +75,7 @@ But none of them worked for me. JSONPath (as explained in [JSONPath - XPath for 
 
 - JSONPath doesn't seem to support renaming the key name, so I couldn't rename `reserved` to `static_ip_addresses`.
 
-Inspired by [1] and [2], I figured out [the following playbook](https://github.com/yaobinwen/ansible/blob/devel/demo/ansible/add-element-to-list.yml) to do the conversion:
+Inspired by [1] and [2], I figured out [the following playbook](https://github.com/yaobinwen/robin_on_rails/blob/master/Ansible/demo/ansible/add-element-to-list.yml) to do the conversion:
 
 ```yaml
 - name: Demo how to add elements to a list.
