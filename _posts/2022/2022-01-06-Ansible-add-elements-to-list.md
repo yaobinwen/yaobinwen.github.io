@@ -109,15 +109,15 @@ Inspired by [1] and [2], I figured out [the following playbook](https://github.c
         config_modified: []
         config_entry:
           # `item` is re-evaluated in every iteration of the loop.
-          iface: "{{item.iface}}"
+          iface: "{ {item.iface} }"
           dhcp: off
-          subnet: "{{item.subnet}}"
-          netmask: "{{item.netmask}}"
-          static_ip_address: "{{item.reserved}}"
+          subnet: "{ {item.subnet} }"
+          netmask: "{ {item.netmask} }"
+          static_ip_address: "{ {item.reserved} }"
           gateway: ~
       set_fact:
-          config_modified: "{{config_modified + [config_entry]}}"
-      loop: "{{config_original}}"
+          config_modified: "{ {config_modified + [config_entry]} }"
+      loop: "{ {config_original} }"
 
     - name: Display the final result.
       debug:
@@ -127,7 +127,7 @@ Inspired by [1] and [2], I figured out [the following playbook](https://github.c
 There are a few notes about the implementation:
 
 - The variable `item` from `loop` can be used in a variable that's defined in `vars`. `item` is re-evaluated in every iteration of the loop so the value of the variable changes accordingly.
-- The variable evaluation (`{{var}}`) is Jinja2 evaluation which is essentially Python code. So `config_modified + [config_entry]` means "put `config_entry` into a list and use this list to extend the current `config_modified`". This is the key that `config_modified` gets extended instead of being overwritten.
+- The variable evaluation (`{ {var} }`) is Jinja2 evaluation which is essentially Python code. So `config_modified + [config_entry]` means "put `config_entry` into a list and use this list to extend the current `config_modified`". This is the key that `config_modified` gets extended instead of being overwritten.
 
 The output of the `debug` task confirms the modification:
 
