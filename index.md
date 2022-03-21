@@ -66,6 +66,7 @@
   - [SSH: Uniqueness of X509 Certificates Serial Numbers](./_posts/2021/2021-03-26-SSH-X509-cert-serial-numbers.md)
 - 2022
   - [Forwarding `gpg-agent` to a Remote System over SSH](./_posts/2022/2022-02-20-Forwarding-gpg-agent.md)
+  - [What I have learned so far about the Ubuntu mitigation on CVE-2022-25636](./_posts/2022/2022-03-21-CVE-2022-25636.md)
 
 ## Software Engineering
 
