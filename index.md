@@ -5,6 +5,8 @@
   - [深度学习初窥](./_posts/2017/2017-01-14-Deep-learning-peek.md)
   - [How to Share Static Files in Django](./_posts/2017/2017-02-07-Django-how-to-share-static-files.md)
   - [How to Embed Django Template Code in Jekyll](./_posts/2017/2017-02-08-Django-code-to-jekyll.md)
+- 2022:
+  - [Why does the Ubuntu installer asks me to re-mount the partitions even though I had done that in earlier installation?](./_posts/2022/2022-03-24-Understanding-partitions-installing-multiple-OSes.md)
 
 ## Ansible
 
