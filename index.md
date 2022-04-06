@@ -90,3 +90,8 @@
   - [Rethinking of Software Development Learning](./_posts/2021/2021-01-27-Rethinking-of-software-dev-learning.md)
 - 2022
   - [关于技术型成长的一些建议](./_posts/2022/2022-01-22-Technical-growth.md)
+
+## Mathematics
+
+- 2022
+  - [Why do we study matrices in linear algebra?](./_posts/2022/2022-04-06-Why-study-matrices-in-linear-algebra.md)
