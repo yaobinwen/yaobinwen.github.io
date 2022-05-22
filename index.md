@@ -1,13 +1,3 @@
-## General Technology
-
-- 2017
-  - [Deploy Diagramo on Ubuntu 14.04](./_posts/2017/2017-01-11-Deploy-Diagramo.md)
-  - [深度学习初窥](./_posts/2017/2017-01-14-Deep-learning-peek.md)
-  - [How to Share Static Files in Django](./_posts/2017/2017-02-07-Django-how-to-share-static-files.md)
-  - [How to Embed Django Template Code in Jekyll](./_posts/2017/2017-02-08-Django-code-to-jekyll.md)
-- 2022:
-  - [Why does the Ubuntu installer asks me to re-mount the partitions even though I had done that in earlier installation?](./_posts/2022/2022-03-24-Understanding-partitions-installing-multiple-OSes.md)
-
 ## Ansible
 
 - 2021
@@ -40,6 +30,7 @@
   - [Finding Ubuntu Packaging for Debian Source Code](./_posts/2021/2021-12-04-Finding-Ubuntu-packaging-for-Debian-source-code.md)
 - 2022
   - [Recover Reprepro Corrupted/Broken `.db` Files](./_posts/2022/2022-02-21-Recover-reprepro-db.md)
+  - [Why does the Ubuntu installer asks me to re-mount the partitions even though I had done that in earlier installation?](./_posts/2022/2022-03-24-Understanding-partitions-installing-multiple-OSes.md)
 
 ## Network & Web
 
@@ -73,13 +64,19 @@
 
 ## UI/Frontend
 
+- 2017
+  - [How to Share Static Files in Django](./_posts/2017/2017-02-07-Django-how-to-share-static-files.md)
+  - [How to Embed Django Template Code in Jekyll](./_posts/2017/2017-02-08-Django-code-to-jekyll.md)
 - 2022
   - [MUI: What is the 'root element' and how to read its document?](./_posts/2022/2022-05-22-What-is-root-element.md)
 
-## Software Engineering
+## Miscellaneous
 
 - 2016
   - [老生常谈：软件开发要以用户为中心](./_posts/2016/2016-03-29-Tasks-should-be-user-centric.md)
+- 2017
+  - [Deploy Diagramo on Ubuntu 14.04](./_posts/2017/2017-01-11-Deploy-Diagramo.md)
+  - [深度学习初窥](./_posts/2017/2017-01-14-Deep-learning-peek.md)
 - 2018
   - [Verifying the Assumptions Before Implementing the Solution](./_posts/2018/2018-04-05-Verify-assumptions.md)
 - 2021
