@@ -1,3 +1,5 @@
+The articles are grouped by the main topics.
+
 ## Ansible
 
 - 2021
