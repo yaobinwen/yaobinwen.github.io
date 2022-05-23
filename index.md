@@ -11,6 +11,11 @@ The articles are grouped by the main topics.
   - [Ansible: How to unit test module without using `pytest`](./_posts/2022/2022-01-09-Ansible-module-unit-tests.md)
   - [Ansible: Why `docker_container`'s `published_ports` only binds IPv4 addresses by default?](./_posts/2022/2022-02-10-docker_container-published_ports.md)
 
+## CMake
+
+- 2022:
+  - [Why does CMake report the missing of `libgmock.a`?](./_posts/2022/2022-05-11-CMake-libgmock.a-not-found.md)
+
 ## DevSecOps
 
 - 2018
