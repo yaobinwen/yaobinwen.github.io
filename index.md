@@ -21,7 +21,7 @@ The articles are grouped by the main topics.
 - 2021
   - [A Process for Complicated Git Merges](./_posts/2021/2021-10-14-A-process-for-complicated-git-merges.md)
 
-## Linux (Mostly Ubuntu)
+## Linux (Mostly Debian/Ubuntu)
 
 - 2017
   - [Ubuntu 14.04 ACPI Issue](./_posts/2017/2017-01-05-Ubuntu-ACPI-issue.md)
