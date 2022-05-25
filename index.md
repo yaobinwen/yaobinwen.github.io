@@ -21,6 +21,14 @@ The articles are grouped by the main topics.
 - 2018
   - [How to Setup Jenkins to Access Local Git Repository](./_posts/2018/2018-08-06-Jenkins-setup-for-local-git-repo.md)
 
+## Frontend
+
+- 2017
+  - [How to Share Static Files in Django](./_posts/2017/2017-02-07-Django-how-to-share-static-files.md)
+  - [How to Embed Django Template Code in Jekyll](./_posts/2017/2017-02-08-Django-code-to-jekyll.md)
+- 2022
+  - [MUI: What is the 'root element' and how to read its document?](./_posts/2022/2022-05-22-What-is-root-element.md)
+
 ## Git
 
 - 2021
@@ -68,14 +76,6 @@ The articles are grouped by the main topics.
   - [Forwarding `gpg-agent` to a Remote System over SSH](./_posts/2022/2022-02-20-Forwarding-gpg-agent.md)
   - [What I have learned so far about the Ubuntu mitigation on CVE-2022-25636](./_posts/2022/2022-03-21-CVE-2022-25636.md)
   - [Stateful Firewalls and How Connections Are Tracked](./_posts/2022/2022-04-12-Stateful-firewalls-and-how-connections-are-tracked.md)
-
-## UI/Frontend
-
-- 2017
-  - [How to Share Static Files in Django](./_posts/2017/2017-02-07-Django-how-to-share-static-files.md)
-  - [How to Embed Django Template Code in Jekyll](./_posts/2017/2017-02-08-Django-code-to-jekyll.md)
-- 2022
-  - [MUI: What is the 'root element' and how to read its document?](./_posts/2022/2022-05-22-What-is-root-element.md)
 
 ## Miscellaneous
 
