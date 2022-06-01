@@ -87,7 +87,6 @@ The articles are grouped by the main topics.
 - 2018
   - [Verifying the Assumptions Before Implementing the Solution](./_posts/2018/2018-04-05-Verify-assumptions.md)
 - 2021
-  - ["Compiler proper" and Communication](./_posts/2021/2021-10-07-Compiler-proper-and-communication.md)
   - [Software Reuse](./_posts/2021/2021-03-30-Software-reuse.md)
 
 ## Learning to Learn
