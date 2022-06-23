@@ -46,6 +46,7 @@ The articles are grouped by the main topics.
 - 2022
   - [Recover Reprepro Corrupted/Broken `.db` Files](./_posts/2022/2022-02-21-Recover-reprepro-db.md)
   - [Why does the Ubuntu installer asks me to re-mount the partitions even though I had done that in earlier installation?](./_posts/2022/2022-03-24-Understanding-partitions-installing-multiple-OSes.md)
+  - [How to customize the behaviors of the application launchers on Ubuntu Dock?](./_posts/2022/2022-06-22-Ubuntu-dash-to-dock.md)
 
 ## Network & Web
 
