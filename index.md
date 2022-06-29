@@ -55,6 +55,7 @@ The articles are grouped by the main topics.
   - [Configure `VirtualBox` Network Bandwidth](./_posts/2017/2017-01-16-Configure-VirtualBox-network-bandwidth.md)
 - 2022
   - [Why does Google Chrome automatically redirect `http://app` to `https://app` but doesn't do that to `http://app2` or `http://napp`?](./_posts/2022/2022-02-18-Google-Chrome-http-app.md)
+  - [Google Chromium: Check out, build, and hack the code](./_posts/2022/2022-06-17-Google-Chrome-build-and-run.md)
 
 ## Python
 
