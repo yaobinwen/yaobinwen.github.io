@@ -108,6 +108,7 @@ The articles are grouped by the main topics.
   - [Rethinking of Software Development Learning](./_posts/2021/2021-01-27-Rethinking-of-software-dev-learning.md)
 - 2022
   - [关于技术型成长的一些建议](./_posts/2022/2022-01-22-Technical-growth.md)
+  - [What aspects to study when studying a subject (to make better notes)?](./_posts/2022/2022-08-27-What-aspects-to-study.md)
 
 ## Mathematics
 
