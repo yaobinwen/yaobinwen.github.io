@@ -24,7 +24,12 @@ Two pieces of software are involved:
 
 On the remote host:
 
-- 1). Import the GPG public key.
+- 1). Import the GPG public key. By following the steps below (refer to [Exchanging keys](https://www.gnupg.org/gph/en/manual/x56.html)):
+  - a). On the local host, run `gpg --list-keys` to find the GPG public key.
+  - b). On the local host, run `gpg --output FILE --armor --export GPG_PUB_KEY_ID` to export the GPG public key.
+  - c). Copy the public key file to the remote host.
+  - d). On the remote host, run `gpg --armor --import FILE` to import the public key.
+  - e). On the remote host, run `gpg --list-keys` to verify the public key is imported successfully.
 - 2). Run `gpgconf --list-dir agent-socket` to find the path to the standard GPG agent socket. Let's call it `<remote-agent-socket>`. For example, the value may be `/run/user/1000/gnupg/S.gpg-agent`.
 - 3). Modify `/etc/ssh/sshd_config` to add the line `StreamLocalBindUnlink yes` to enable automatic removal of stale sockets when connecting to the remote machine. Then run `sudo systemctl restart ssh.service`.
 
