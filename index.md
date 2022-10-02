@@ -77,6 +77,8 @@ The articles are grouped by the main topics.
 
 ## Security
 
+- By others:
+  - [Søren Poulsen: Encrypting a USB flash drive on Ubuntu](https://sorenpoulsen.com/encrypting-a-usb-flash-drive-on-ubuntu): I really like the section "Fill the drive with noise" that tries to make the disk even more secure.
 - 2021
   - [Thinking in Security](./_posts/2021/2021-02-14-Thinking-in-security.md)
   - [SSH: Too many authentication failures](./_posts/2021/2021-03-23-SSH-too-many-auth-failures.md)
