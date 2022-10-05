@@ -20,6 +20,7 @@ The articles are grouped by the main topics.
 
 - 2022:
   - [A quick review of Prometheus](./_posts/2022/2022-10-04-A-quick-review-of-Prometheus.md)
+  - [A quick review of Fluentd](./_posts/2022/2022-10-05-A-quick-review-of-Fluentd.md)
 
 ## DevSecOps
 
