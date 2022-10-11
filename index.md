@@ -105,6 +105,8 @@ The articles are grouped by the main topics.
   - [Verifying the Assumptions Before Implementing the Solution](./_posts/2018/2018-04-05-Verify-assumptions.md)
 - 2021
   - [Software Reuse](./_posts/2021/2021-03-30-Software-reuse.md)
+- 2022
+  - [A quick review of serial communication](./_posts/2022/2022-10-10-A-quick-review-of-serial-communication.md)
 
 ## Learning to Learn
 
