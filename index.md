@@ -96,17 +96,20 @@ The articles are grouped by the main topics.
 
 ## Miscellaneous
 
-- 2016
-  - [老生常谈：软件开发要以用户为中心](./_posts/2016/2016-03-29-Tasks-should-be-user-centric.md)
 - 2017
   - [Deploy Diagramo on Ubuntu 14.04](./_posts/2017/2017-01-11-Deploy-Diagramo.md)
   - [深度学习初窥](./_posts/2017/2017-01-14-Deep-learning-peek.md)
+- 2022
+  - [A quick review of serial communication](./_posts/2022/2022-10-10-A-quick-review-of-serial-communication.md)
+
+## Thoughts & Opinions
+
+- 2016
+  - [老生常谈：软件开发要以用户为中心](./_posts/2016/2016-03-29-Tasks-should-be-user-centric.md)
 - 2018
   - [Verifying the Assumptions Before Implementing the Solution](./_posts/2018/2018-04-05-Verify-assumptions.md)
 - 2021
   - [Software Reuse](./_posts/2021/2021-03-30-Software-reuse.md)
-- 2022
-  - [A quick review of serial communication](./_posts/2022/2022-10-10-A-quick-review-of-serial-communication.md)
 
 ## Learning to Learn
 
