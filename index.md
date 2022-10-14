@@ -55,6 +55,7 @@ The articles are grouped by the main topics.
   - [How to customize the behaviors of the application launchers on Ubuntu Dock?](./_posts/2022/2022-06-22-Ubuntu-dash-to-dock.md)
   - [How to read GNOME shell extension source code?](./_posts/2022/2022-06-23-How-to-read-GNOME-shell-extension-source-code.md)
   - [Locales on Ubuntu and how to set it in a Docker container](./_posts/2022/2022-07-03-Ubuntu-Docker-locales.md)
+  - [A quick review of Linux udev](./_posts/2022/2022-10-13-A-quick-review-of-udev.md)
 
 ## Network & Web
 
