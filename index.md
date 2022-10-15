@@ -95,7 +95,7 @@ The articles are grouped by the main topics.
   - [What I have learned so far about the Ubuntu mitigation on CVE-2022-25636](./_posts/2022/2022-03-21-CVE-2022-25636.md)
   - [Stateful Firewalls and How Connections Are Tracked](./_posts/2022/2022-04-12-Stateful-firewalls-and-how-connections-are-tracked.md)
 
-## Miscellaneous
+## Miscellaneous Technologies
 
 - 2017
   - [Deploy Diagramo on Ubuntu 14.04](./_posts/2017/2017-01-11-Deploy-Diagramo.md)
