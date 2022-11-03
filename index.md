@@ -102,6 +102,8 @@ The articles are grouped by the main topics.
 
 ## Miscellaneous Technologies
 
+- By others:
+  - [Spencer Cox: Hyperfocal Distance Explained](https://photographylife.com/landscapes/hyperfocal-distance-explained): My work involves computer vision technologies so we need to learn some basic knowledge about cameras.
 - 2017
   - [Deploy Diagramo on Ubuntu 14.04](./_posts/2017/2017-01-11-Deploy-Diagramo.md)
   - [深度学习初窥](./_posts/2017/2017-01-14-Deep-learning-peek.md)
