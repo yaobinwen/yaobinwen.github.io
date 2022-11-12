@@ -48,6 +48,7 @@ The articles are grouped by the main topics.
 - 2018
   - [How to Debug Debian Packages](./_posts/2018/2018-07-31-Debug-deb-pkg.md)
 - 2021
+  - [Why is `kernel.core_pattern` not effective on my Ubuntu 18.04 VM after rebooting?](./_posts/2021/2021-06-25-kernel.core_pattern-not-effective.md)
   - [Finding Ubuntu Packaging for Debian Source Code](./_posts/2021/2021-12-04-Finding-Ubuntu-packaging-for-Debian-source-code.md)
 - 2022
   - [Recover Reprepro Corrupted/Broken `.db` Files](./_posts/2022/2022-02-21-Recover-reprepro-db.md)
