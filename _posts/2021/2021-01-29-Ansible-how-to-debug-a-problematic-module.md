@@ -6,7 +6,9 @@ tags: [Tech]
 title: "Ansible: How to Debug a Problematic Module"
 ---
 
-Typicall, you don't debug a particular task or module in the first place. Instead, you test your playbook but encounter issues. As you debug further into the playbook, you may need to debug into a task or a module.
+(Last update: 2022-11-19)
+
+This article describes how to debug **into** an Ansible module, i.e., you will read and modify the Ansible module's source code to figure out the root cause of the issue.
 
 ## 1. Scenario
 
@@ -91,9 +93,9 @@ I couldn't figure out why I got a "Permission denied", so I thought I'd better d
 
 I used [1] as the primary reference to learning module debugging.
 
-Set the environment [`ANSIBLE_KEEP_REMOTE_FILES`](https://docs.ansible.com/ansible/latest/reference_appendices/config.html#envvar-ANSIBLE_KEEP_REMOTE_FILES) to `1` on the **control host** to keep the remote module files: `export ANSIBLE_KEEP_REMOTE_FILES=1`.
+Set the environment variable [`ANSIBLE_KEEP_REMOTE_FILES`](https://docs.ansible.com/ansible/latest/reference_appendices/config.html#envvar-ANSIBLE_KEEP_REMOTE_FILES) to `1` on the **control host** to keep the remote module files: `export ANSIBLE_KEEP_REMOTE_FILES=1`.
 
-In my case, the saved module file (`AnsiballZ_stat.py`) is shown in the following log message:
+In my case, after `ANSIBLE_KEEP_REMOTE_FILES` was enabled, the saved module file (`AnsiballZ_stat.py`) was shown in the following log message:
 
 ```
 <localhost> PUT /home/vagrant/.ansible/tmp/ansible-local-23496jyGGOC/tmpgSbfgI TO /home/vagrant/.ansible/tmp/ansible-tmp-1611960114.27-23625-278355414153003/AnsiballZ_stat.py
@@ -104,11 +106,13 @@ Then I could `cd /home/vagrant/.ansible/tmp/ansible-tmp-1611960114.27-23625-2783
 In order to debug the module, **firstly, I needed to extract the content of the bundled `stat` module by running `./AnsiballZ_stat.py explode`**:
 
 ```
+$ ./AnsiballZ_stat.py explode
+
 Module expanded into:
 /home/vagrant/.ansible/tmp/ansible-tmp-1611960114.27-23625-278355414153003/debug_dir
 ```
 
-The directory `debug_dir` has the following hierarchy:
+The directory `debug_dir` had the following hierarchy and contents:
 
 ```
 ├── AnsiballZ_stat.py
@@ -162,15 +166,17 @@ The important files are:
 
 **Then I could run `./AnsiballZ_stat.py execute | jq`** to run the `stat` module with the arguments in `args`. I could modify the contents of the files to change the behaviors or print more details for debugging purpose.
 
-However, when running `./AnsiballZ_stat.py execute | jq` directly, I ran it in the non-privileged user mode under which the `Permission denied` issue didn't exist.
+However, when running `./AnsiballZ_stat.py execute | jq` directly, I ran it in the **non-privileged** user mode under which the `Permission denied` issue didn't exist. In other words, I didn't successfully reproduce the issue I wanted to trace down.
 
-So I looked closely at the detailed output of the playbook. The log message below shows how to run the module in privileged mode (`ansible_become: yes`):
+So I decided to try to run the module in privileged mode, and I looked closely at the detailed output of the playbook in order to figure out how to do that. The log message below shows how to run the module in privileged mode (`ansible_become: yes`):
 
 ```
 <localhost> EXEC /bin/sh -c 'sudo -H -S  -p "[sudo via ansible, key=zevpwzzrlphljnlsxijznwftwiylwrtx] password:" -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-zevpwzzrlphljnlsxijznwftwiylwrtx ; /usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1611960114.27-23625-278355414153003/AnsiballZ_stat.py'"'"' && sleep 0'
 ```
 
-The actual command starts with `sudo -H -S` and ends with `AnsiballZ_stat.py'"'"'`. Many levels of single- and double-quotation marks. But if you run the command directly:
+The actual command starts with `sudo -H -S` and ends with `AnsiballZ_stat.py'"'"'`. Many levels of single- and double-quotation marks.
+
+However, if you simply copy-and-paste and run the command directly, as follows:
 
 ```bash
 sudo -H -S  -p "[sudo via ansible, key=zevpwzzrlphljnlsxijznwftwiylwrtx] password:" -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-zevpwzzrlphljnlsxijznwftwiylwrtx ; /usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1611960114.27-23625-278355414153003/AnsiballZ_stat.py'"'"'
@@ -182,13 +188,20 @@ You will get the error:
 /bin/sh: 1: 'echo BECOME-SUCCESS-zevpwzzrlphljnlsxijznwftwiylwrtx ; /usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1611960114.27-23625-278355414153003/AnsiballZ_stat.py': not found
 ```
 
-This is because those levels of quotation marks make the entire string `echo BECOME-SUCCESS-zevpwzzrlphljnlsxijznwftwiylwrtx ; /usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1611960114.27-23625-278355414153003/AnsiballZ_stat.py` be treated as a single command, which surely could not be found. You need to strip off the quotations to leave only the outermost level to quote the actual command in order to run it:
+This is because those levels of quotation marks make the entire string `echo BECOME-SUCCESS-zevpwzzrlphljnlsxijznwftwiylwrtx ; /usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1611960114.27-23625-278355414153003/AnsiballZ_stat.py` be treated as a single command, which surely could not be found. You need to strip off the quotations to keep only the outermost level to quote the actual command in order to run it:
 
 ```bash
 sudo -H -S  -p "[sudo via ansible, key=zevpwzzrlphljnlsxijznwftwiylwrtx] password:" -u root /bin/sh -c '/usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1611960114.27-23625-278355414153003/AnsiballZ_stat.py' | jq
 ```
 
-And the output would be the following, with the "Permission denied" error message:
+**Note** that if you had modified the locally extracted `./debug_dir/ansible/modules/files/stat.py` with the hope of printing more debugging information, the command above wouldn't use the locally modified version. To use the locally modified version, you need to use `AnsiballZ_stat.py execute`, as shown below:
+
+```
+bash
+sudo -H -S  -p "[sudo via ansible, key=zevpwzzrlphljnlsxijznwftwiylwrtx] password:" -u root /bin/sh -c '/usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1611960114.27-23625-278355414153003/AnsiballZ_stat.py execute' | jq
+```
+
+And the output would be the following, with the expected "Permission denied" error message:
 
 ```json
 {
@@ -208,6 +221,8 @@ And the output would be the following, with the "Permission denied" error messag
   }
 }
 ```
+
+Now I could reproduce the issue and continue to investigate further.
 
 ## 3. Use `ansible` to Reproduce
 
