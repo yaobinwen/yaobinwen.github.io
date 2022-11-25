@@ -8,7 +8,7 @@ title: Reading of Unicode standard v15.0.0
 
 (NOTE: This is still work in progress.)
 
-## 0a. How to read the section indexes and reference markers
+## 0a. How to read the section indexes and reference markers in this document
 
 This document is divided into sections. The section index consists of two parts: Unicode standard section index and the section index in this document, in the form of `<S>-<s>`. For example, `7.1-2` refers to the second section in all the sections in this document that are related with the section 7.1 in the Unicode standard. The purpose is for extensibility: If later I want to insert a section, I only need to re-index a small number of sections in this document.
 
