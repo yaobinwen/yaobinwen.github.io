@@ -11,6 +11,7 @@ The articles are grouped by the main topics.
   - [Ansible: How to unit test module without using `pytest`](./_posts/2022/2022-01-09-Ansible-module-unit-tests.md)
   - [Ansible: Why `docker_container`'s `published_ports` only binds IPv4 addresses by default?](./_posts/2022/2022-02-10-docker_container-published_ports.md)
   - [Ansible: Develop and Debug](./_posts/2022/2022-12-23-Ansible-develop-and-debug.md)
+  - [Ansible: How to display a role's path](./_posts/2022/2022-12-23-Ansible-display-role-path.md)
 
 ## CMake
 
