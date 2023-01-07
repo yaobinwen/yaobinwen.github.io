@@ -30,7 +30,7 @@ The articles are grouped by the main topics.
 - 2018
   - [How to Setup Jenkins to Access Local Git Repository](./_posts/2018/2018-08-06-Jenkins-setup-for-local-git-repo.md)
 
-## Frontend
+## Frontend (JavaScript; CSS; etc.)
 
 - 2017
   - [How to Share Static Files in Django](./_posts/2017/2017-02-07-Django-how-to-share-static-files.md)
