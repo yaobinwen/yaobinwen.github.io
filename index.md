@@ -37,6 +37,8 @@ The articles are grouped by the main topics.
   - [How to Embed Django Template Code in Jekyll](./_posts/2017/2017-02-08-Django-code-to-jekyll.md)
 - 2022
   - [MUI: What is the 'root element' and how to read its document?](./_posts/2022/2022-05-22-What-is-root-element.md)
+- 2023
+  - [JavaScript: `Promise.all()` vs `Promise.allSettled()`](./_posts/2023/2023-01-07-JS-all-vs-allSettled.md)
 
 ## Git
 
