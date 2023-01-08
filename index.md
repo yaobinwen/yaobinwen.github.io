@@ -39,6 +39,7 @@ The articles are grouped by the main topics.
   - [MUI: What is the 'root element' and how to read its document?](./_posts/2022/2022-05-22-What-is-root-element.md)
 - 2023
   - [JavaScript: `Promise.all()` vs `Promise.allSettled()`](./_posts/2023/2023-01-07-JS-all-vs-allSettled.md)
+  - [JavaScript: How to implement a Promise with timeout (and cancelation)](./_posts/2023/2023-01-08-JS-promise-timeout.md)
 
 ## Git
 
