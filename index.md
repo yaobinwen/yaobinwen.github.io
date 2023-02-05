@@ -116,6 +116,8 @@ The articles are grouped by the main topics.
   - [深度学习初窥](./_posts/2017/2017-01-14-Deep-learning-peek.md)
 - 2022
   - [A quick review of serial communication](./_posts/2022/2022-10-10-A-quick-review-of-serial-communication.md)
+- 2023
+  - [A quick review of JPEG format](./_posts/2023/2023-02-04-JPEG-quick-review.md)
 
 ## Thoughts & Opinions
 
