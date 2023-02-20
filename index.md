@@ -139,6 +139,8 @@ The articles are grouped by the main topics.
 - 2022
   - [关于技术型成长的一些建议](./_posts/2022/2022-01-22-Technical-growth.md)
   - [What aspects to study when studying a subject (to make better notes)?](./_posts/2022/2022-08-27-What-aspects-to-study.md)
+- 2023
+  - [How to study a (thick) technical book?](./_posts/2023/2023-02-20-How-to-study-a-thick-tech-book.md)
 
 ## Mathematics
 
