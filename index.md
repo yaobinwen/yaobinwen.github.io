@@ -106,6 +106,8 @@ The articles are grouped by the main topics.
   - [Forwarding `gpg-agent` to a Remote System over SSH](./_posts/2022/2022-02-20-Forwarding-gpg-agent.md)
   - [What I have learned so far about the Ubuntu mitigation on CVE-2022-25636](./_posts/2022/2022-03-21-CVE-2022-25636.md)
   - [Stateful Firewalls and How Connections Are Tracked](./_posts/2022/2022-04-12-Stateful-firewalls-and-how-connections-are-tracked.md)
+- 2023
+  - [Information, Entropy, and Password Strength](./_posts/2023/2023-03-06-Information-Entropy-and-password-strength.md)
 
 ## Unicode
 
