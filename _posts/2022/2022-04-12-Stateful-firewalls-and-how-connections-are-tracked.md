@@ -1,6 +1,6 @@
 ---
 comments: true
-date: 2022-04-06
+date: 2022-04-12
 layout: post
 tags: [Tech]
 title: "Stateful Firewalls and How Connections Are Tracked"

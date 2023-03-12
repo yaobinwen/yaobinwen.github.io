@@ -1,6 +1,6 @@
 ---
 comments: true
-date: 2023-01-07
+date: 2023-01-08
 layout: post
 tags: [Tech;Frontend;JavaScript;Async;Promise]
 title: "JavaScript: How to implement a Promise with timeout (and cancelation)"
