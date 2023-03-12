@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 The articles are grouped by the main topics.
 
 ## Ansible
