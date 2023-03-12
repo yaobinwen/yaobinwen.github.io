@@ -38,6 +38,8 @@ In Python, [`itertools.product`](https://docs.python.org/3/library/itertools.htm
 
 `with_subelements` essentially calculates the Cartesian product of two lists. This is why it takes two input arguments. The special thing about `with_subelements` is: its second list is contained as a sub-element in the elements of the first list, hence the lookup name `with_subelements`. For example [2.1]:
 
+{% raw %}
+
 ```yaml
 ---
 - hosts: localhost
@@ -67,6 +69,8 @@ In Python, [`itertools.product`](https://docs.python.org/3/library/itertools.htm
         - "{{ families }}"
         - children
 ```
+
+{% endraw %}
 
 The first list is `families`; the second list is `children` which is a sub-element in every element of the first list. Therefore, `with_subelements` calculates the Cartesian product of the two lists and produces the following list of pairs:
 
