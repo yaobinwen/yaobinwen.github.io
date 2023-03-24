@@ -24,6 +24,8 @@ I have been always afraid of and frustrated by mathematics. When I was in school
 
 - 2022
   - [Why do we study matrices in linear algebra?]({% post_url /2022/2022-04-06-Why-study-matrices-in-linear-algebra %})
+- 2023
+  - [What do we learn when we learn math?]({% post_url /2023/2023-03-24-What-do-we-learn-when-we-learn-math %})
 
 ---
 
