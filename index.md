@@ -2,7 +2,32 @@
 layout: default
 ---
 
-The articles are grouped by the main topics.
+## Learning to Learn
+
+As knowledge is becoming way more easily accessible than ever before, not to mention with the help of artificial intelligence such as ChatGPT, I think the ability of learning is becoming more important than memorizing the knowledge itself. Please don't get me wrong: I don't mean we should just leave all the knowledge on the Internet and only look it up when we need it. I mean we need to pay more attention to how to learn new knowledge more effectively and efficiently. Therefore, the first section of the blog is all about learning to learn.
+
+- 2017
+  - [Synergic Actions: Make the Best Use of Your Daily Life And Work]({% post_url /2017/2017-08-07-Synergic-actions %})
+  - [Book Summary: An Illustrated Book of Bad Arguments]({% post_url /2017/2017-09-09-Bad-Arguments %})
+  - [读书笔记：《好好学习》]({% post_url /2017/2017-09-09-Study-Wisely %})
+- 2021
+  - [Rethinking of Software Development Learning]({% post_url /2021/2021-01-27-Rethinking-of-software-dev-learning %})
+- 2022
+  - [关于技术型成长的一些建议]({% post_url /2022/2022-01-22-Technical-growth %})
+  - [What aspects to study when studying a subject (to make better notes)?]({% post_url /2022/2022-08-27-What-aspects-to-study %})
+- 2023
+  - [How to study a (thick) technical book?]({% post_url /2023/2023-02-20-How-to-study-a-thick-tech-book %})
+
+## Mathematics
+
+I have been always afraid of and frustrated by mathematics. When I was in school, I just couldn't get the point of math and did pretty bad in all kinds of tests. As a result, I hated math and tried to avoid it as much as possible. I didn't really start to get interested in math until the senior year in college. When I reflected on how I learned mathematics, I realized it was because I wasn't learning math in the appropriate way with the appropriate mindset. Should I have done it appropriately when I was much younger, I may not at all suffer that much from learning this subject even though I may still not perform well in the tests. As a grown-up, I am trying to catch up the math learning I have fallen behind in my entire life. As a software developer, math can help me think more precisely and clearly.
+
+- 2022
+  - [Why do we study matrices in linear algebra?]({% post_url /2022/2022-04-06-Why-study-matrices-in-linear-algebra %})
+
+---
+
+The following sections are about concrete computer technologies. The articles are grouped by the main topics.
 
 ## Ansible
 
@@ -122,38 +147,16 @@ The articles are grouped by the main topics.
 
 - By others:
   - [Spencer Cox: Hyperfocal Distance Explained](https://photographylife.com/landscapes/hyperfocal-distance-explained): My work involves computer vision technologies so we need to learn some basic knowledge about cameras.
+- 2016
+  - [老生常谈：软件开发要以用户为中心]({% post_url /2016/2016-03-29-Tasks-should-be-user-centric %})
 - 2017
   - [Deploy Diagramo on Ubuntu 14.04]({% post_url /2017/2017-01-11-Deploy-Diagramo %})
   - [深度学习初窥]({% post_url /2017/2017-01-14-Deep-learning-peek %})
-- 2022
-  - [A quick review of serial communication]({% post_url /2022/2022-10-10-A-quick-review-of-serial-communication %})
-- 2023
-  - [A quick review of JPEG format]({% post_url /2023/2023-02-04-JPEG-quick-review %})
-
-## Thoughts & Opinions
-
-- 2016
-  - [老生常谈：软件开发要以用户为中心]({% post_url /2016/2016-03-29-Tasks-should-be-user-centric %})
 - 2018
   - [Verifying the Assumptions Before Implementing the Solution]({% post_url /2018/2018-04-05-Verify-assumptions %})
 - 2021
   - [Software Reuse]({% post_url /2021/2021-03-30-Software-reuse %})
-
-## Learning to Learn
-
-- 2017
-  - [Synergic Actions: Make the Best Use of Your Daily Life And Work]({% post_url /2017/2017-08-07-Synergic-actions %})
-  - [Book Summary: An Illustrated Book of Bad Arguments]({% post_url /2017/2017-09-09-Bad-Arguments %})
-  - [读书笔记：《好好学习》]({% post_url /2017/2017-09-09-Study-Wisely %})
-- 2021
-  - [Rethinking of Software Development Learning]({% post_url /2021/2021-01-27-Rethinking-of-software-dev-learning %})
 - 2022
-  - [关于技术型成长的一些建议]({% post_url /2022/2022-01-22-Technical-growth %})
-  - [What aspects to study when studying a subject (to make better notes)?]({% post_url /2022/2022-08-27-What-aspects-to-study %})
+  - [A quick review of serial communication]({% post_url /2022/2022-10-10-A-quick-review-of-serial-communication %})
 - 2023
-  - [How to study a (thick) technical book?]({% post_url /2023/2023-02-20-How-to-study-a-thick-tech-book %})
-
-## Mathematics
-
-- 2022
-  - [Why do we study matrices in linear algebra?]({% post_url /2022/2022-04-06-Why-study-matrices-in-linear-algebra %})
+  - [A quick review of JPEG format]({% post_url /2023/2023-02-04-JPEG-quick-review %})
