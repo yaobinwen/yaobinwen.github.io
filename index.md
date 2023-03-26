@@ -17,6 +17,7 @@ As knowledge is becoming way more easily accessible than ever before, not to men
   - [What aspects to study when studying a subject (to make better notes)?]({% post_url /2022/2022-08-27-What-aspects-to-study %})
 - 2023
   - [How to study a (thick) technical book?]({% post_url /2023/2023-02-20-How-to-study-a-thick-tech-book %})
+  - [Make It Stick: How to use this book to improve learning?]({% post_url /2023/2023-03-26-Make-it-stick-how-to-use-this-book-to-improve-learning %})
 
 ## Mathematics
 
