@@ -46,6 +46,11 @@ The following sections are about concrete computer technologies. The articles ar
   - [Ansible: How to display a role's path]({% post_url /2022/2022-12-23-Ansible-display-role-path %})
   - [Ansible: How `check_mode` is set]({% post_url /2022/2022-12-23-Ansible-check-mode %})
 
+## Artificial Intelligence
+
+- 2017
+  - [深度学习初窥]({% post_url /2017/2017-01-14-Deep-learning-peek %})
+
 ## CMake
 
 - 2022:
@@ -154,7 +159,6 @@ The following sections are about concrete computer technologies. The articles ar
   - [老生常谈：软件开发要以用户为中心]({% post_url /2016/2016-03-29-Tasks-should-be-user-centric %})
 - 2017
   - [Deploy Diagramo on Ubuntu 14.04]({% post_url /2017/2017-01-11-Deploy-Diagramo %})
-  - [深度学习初窥]({% post_url /2017/2017-01-14-Deep-learning-peek %})
 - 2018
   - [Verifying the Assumptions Before Implementing the Solution]({% post_url /2018/2018-04-05-Verify-assumptions %})
 - 2021
