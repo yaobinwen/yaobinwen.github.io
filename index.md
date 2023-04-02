@@ -50,6 +50,8 @@ The following sections are about concrete computer technologies. The articles ar
 
 - 2017
   - [深度学习初窥]({% post_url /2017/2017-01-14-Deep-learning-peek %})
+- 2023
+  - [AI and the guy who looked for food in trash bins]({% post_url /2023/2023-04-02-AI-and-the-guy-who-looked-for-food-in-trash-bins %})
 
 ## CMake
 
