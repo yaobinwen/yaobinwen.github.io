@@ -6,11 +6,67 @@ tags: [Tech]
 title: A quick review of serial communication
 ---
 
+(Updated on 2023-04-04)
+
 ## 1. What is serial communication?
 
-Serial communication is a communication method that uses **one or two** transmission lines to send and receive data, **one bit at a time**.
+**Serial communication** is a communication method that uses **one or two** transmission lines to send and receive data, **one bit at a time**.
 
-## 2. Serial communication standards
+The following figure from [4] shows serial communication:
+
+![Serial communication](https://circuitdigest.com/sites/default/files/inlineimages/u/Serial-communication.png)
+
+In contrast, parallel communication transfers multiple bits at the same time. They usually require _buses_ of data - transmitting across eight, sixteen, or more wires.
+
+The following figure from [4] shows parallel communication:
+
+![Parallel communication](https://circuitdigest.com/sites/default/files/inlineimages/u/Parallel-communication.png)
+
+The two ways of communication can be compared as follows:
+
+| Parameter | Serial Communication | Parallel Communication |
+|----------:|:--------------------:|:-----------------------|
+| Transmission | One bit at one clock pulse | A chunk of data at a time |
+| Number of lines | 1 | N lines for transmitting N bits |
+| Communication speed | low | fast |
+| Cost | Low | High |
+| Situation | Preferred for long distance | Preferred for short distance |
+
+## 2. RX and TX
+
+A serial communication device should have two serial pins:
+- `RX`: the receiver.
+- `TX`: the transmitter (i.e., sender).
+
+The following figure from [5] shows how RX and TX pins are wired:
+
+![RX and TX wiring](https://cdn.sparkfun.com/assets/2/5/c/4/5/50e1ce8bce395fb62b000000.png)
+
+When sending data, the sender sets the signal on the wire to the corresponding bit state, and the receiver samples the signal on the wire to get the bit state. Therefore, it's important that the sender and the receiver work in the same frequency (i.e., baud rate, see below). Otherwise, the receiver will just reads wrong data.
+
+There are two common ways to guarantee the two devices work in the same frequency: using a clock (i.e., synchronous) or not using a clock (i.e., asynchronous).
+
+## 3. Serial communication: synchronous vs asynchronous
+
+Serial communication protocols can be sorted into two groups: synchronous and asynchronous.
+
+In synchronous transmission:
+- The sender and the receiver share the same clock signal. This is usually done by accompanying the data lines with at least one additional clock line between the two devices.
+  - The receiver only samples the data wire when the clock signal is at a specific state (i.e., rising or falling). See [6] "A Synchronous Solution".
+- Each character or byte does not have to start with a start bit or end with a stop bit, so the transfer rate is higher compared with the asynchronous transmission.
+- Requires master/slave configuration (because the master device needs to provide the clock signal to all the receivers).
+- Cost is higher because it requires at least two wires (data wire and clock wire).
+
+In asynchronous transmission:
+- The sender and the receiver do not use a clock to synchronize data.
+- Data is sent in character or byte, so the speed is low.
+- Each character or byte starts with a start bit and ends with a stop bit in order to tell the receiver where data start and end.
+- There is a time delay between the communication of two bytes.
+- The sender and the receiver may work at different clock frequencies.
+- The timing errors can accumulate on the sender and the receiver, so synchronization bits can be inserted into the data flow in order to correct the timing errors.
+- Cost is lower because it requires only one wire.
+
+## 4. Serial communication standards
 
 RS-232C/RS-422A/RS-485 are EIA (Electronic Industries Association) communication standards (where "RS" means "Recommended Standard").
 
@@ -33,7 +89,7 @@ Other notes:
 | Operation mode         | Single-ended<br/>(unbalanced type) | Differential<br/>(balanced type) | Differential<br/>(balanced type) |
 | Features               | Short distance<br/>Full-duplex<br/>1:1 connection | Long distance<br/>Full-duplex, half-duplex<br/>1:N connection | Long distance<br/>Full-duplex, half-duplex<br/>N:N connection |
 
-## 3. Signal assignments and connectors
+## 5. Signal assignments and connectors
 
 The figure from [1] describes the D-sub 9-pin signal assignments and signal lines that are defined in RS-232C.
 
@@ -52,7 +108,7 @@ The figure from [1] describes the D-sub 9-pin signal assignments and signal line
 | 9       | RI | Ring Indicator |
 | CASE    | FG | Frame Ground |
 
-## 4. Equipment types & connection methods
+## 6. Equipment types & connection methods
 
 There are two types of equipment:
 - **Data communication equipment (DCE)**: Equipment that passively operates such as modems, printers, and plotters.
@@ -67,7 +123,7 @@ When connecting two devices of different types together, one needs to use a **st
 | DTE      | DCE      | straight through  |
 | DTE      | DTE      | crossover         |
 
-## 5. Transmission modes
+## 7. Transmission modes
 
 There are three transmission modes:
 - Simplex
@@ -82,61 +138,6 @@ Suppose we have two devices `A` and `B` that are connected via a serial cable, t
 - **Full Duplex**: `A` and `B` can send and receive data **at the same time**.
   - Examples: Telephone
 
-## 6. Data transmission
-
-In one particular transmission mode, the data transmission can be done in two ways:
-- **Serial communication**: data is sent **bit by bit** using one wire.
-
-```
-A -- 11001010 --> B
-```
-
-- **Parallel communication**: data is sent by 8, 16, or 32 bits at a time.
-
-```
-   |-- 1 --> |
-   |-- 1 --> |
-   |-- 0 --> |
-A -|-- 0 --> |-> B
-   |-- 1 --> |
-   |-- 0 --> |
-   |-- 1 --> |
-   |-- 0 --> |
-```
-
-The two ways of data transmission can be compared as follows:
-
-| Parameter | Serial Communication | Parallel Communication |
-|----------:|:--------------------:|:-----------------------|
-| Transmission | One bit at one clock pulse | A chunk of data at a time |
-| Number of lines | 1 | N lines for transmitting N bits |
-| Communication speed | low | fast |
-| Cost | Low | High |
-| Situation | Preferred for long distance | Preferred for short distance |
-
-## 7. Synchronous vs asynchronous
-
-In synchronous transmission:
-- The sender and the receiver share the same clock signal. This is usually done by accompanying the data lines with at least one additional clock line between the two devices.
-- Supports high data transfer rate because data can be sent in chunks.
-- Requires master/slave configuration (because the master device needs to provide the clock signal to all the receivers).
-
-The following figure from [4] shows synchronous transmission:
-
-![Synchronous transmission](https://circuitdigest.com/sites/default/files/inlineimages/u/Serial-communication.png)
-
-In asynchronous transmission:
-- The sender and the receiver do not use a clock to synchronize data.
-- Data is sent in character or byte, so the speed is low.
-- Each character or byte starts with a start bit and ends with a stop bit in order to tell the receiver where data start and end.
-- There is a time delay between the communication of two bytes.
-- The sender and the receiver may work at different clock frequencies.
-- The timing errors can accumulate on the sender and the receiver, so synchronization bits can be inserted into the data flow in order to correct the timing errors.
-
-The following figure from [4] shows asynchronous transmission:
-
-![Asynchronous transmission](https://circuitdigest.com/sites/default/files/inlineimages/u/Parallel-communication.png)
-
 ## 8. Baud rate
 
 Baud rate is the rate at which information is transferred. Its unit is **bits per second (bps)**. The user needs to set the baud rate on both the sender and the receiver.
@@ -148,9 +149,35 @@ Baud rate is the rate at which information is transferred. Its unit is **bits pe
 - odd parity check (ODD)
 - no parity check (NONE)
 
+## 10. Universal Asynchronous Receiver/Transmitter (UART)
+
+A **universal asynchronous receiver/transmitter (UART)** is a block of circuitry that acts as an intermediary between parallel and serial interfaces. On one end of the UART is a bus of eight-or-so data lines (plus some control pins), on the other is the two serial wires - RX and TX. The figure from [5] shows this:
+
+![Super-simplified UART interface](https://cdn.sparkfun.com/assets/d/1/f/5/b/50e1cf30ce395fb227000000.png)
+
+## 11. Serial Peripheral Interface (SPI)
+
+**Serial peripheral interface (SPI)** is a synchronous solution for serial communication. The following figure from [6] shows the components in SPI:
+
+![SPI communication](https://cdn.sparkfun.com/assets/learn_tutorials/1/6/SPI_CS_Updated2.png)
+
+- Controller: The device that generates the clock signals. There is always only one controller.
+  - Old name: master
+- Peripheral: The device that acts based on the received clock signals. There can be one or multiple peripherals.
+  - Old name: slave
+- CLK/SCK: The clock signal. (`SCK` means "Serial Clock".)
+- PICO: "Peripheral In / Controller Out", the data line for the controller to send data to the peripheral.
+- POCI: "Peripheral Out / Controller In", the data line for the peripheral to send data to the controller.
+- CS: "Chip Select", the line that tells the peripheral that it is being selected for communication.
+  - Usually "active low", meaning when it's held high, the peripheral is disconnected from the communication bus; when it's held low, the peripheral is connected to the communication bus.
+
+Because only the controller can generate clock signals, when the controller needs to receive data from the peripheral, the controller needs to "expect" that, i.e., when sending the command, the controller needs to know in prior whether the command will return something or not. "In practice this isn't a problem, as SPI is generally used to talk to sensors that have a very specific command structure." [6]
+
 ## References
 
 - [1] [Serial communication Basic Knowledge -RS-232C/RS-422/RS-485](https://www.contec.com/support/basic-knowledge/daq-control/serial-communicatin/)
 - [2] [What is Serial Communication? How does it work?](https://instrumentationblog.com/what-is-serial-communication/)
 - [3] [The difference between straight through cable, crossover, and rollover cables](https://www.comparitech.com/net-admin/difference-between-straight-through-crossover-rollover-cables/)
 - [4] [RS232 Serial Communication Protocol: Basics, Working & Specifications](https://circuitdigest.com/article/rs232-serial-communication-protocol-basics-specifications)
+- [5] [SparkFun Electronics: Serial Communication](https://learn.sparkfun.com/tutorials/serial-communication)
+- [6] [SparkFun Electronics: Serial Peripheral Interface (SPI)](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all)
