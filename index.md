@@ -103,6 +103,7 @@ The following sections are about concrete computer technologies. The articles ar
 - 2022
   - [Recover Reprepro Corrupted/Broken `.db` Files]({% post_url /2022/2022-02-21-Recover-reprepro-db %})
   - [Why does the Ubuntu installer asks me to re-mount the partitions even though I had done that in earlier installation?]({% post_url /2022/2022-03-24-Understanding-partitions-installing-multiple-OSes %})
+  - [What is the detailed process of resolving `${shlibs:Depends}` when creating a Debian package?]({% post_url /2022/2022-04-07-Resolving-shlibs-depends %})
   - [How to customize the behaviors of the application launchers on Ubuntu Dock?]({% post_url /2022/2022-06-22-Ubuntu-dash-to-dock %})
   - [How to read GNOME shell extension source code?]({% post_url /2022/2022-06-23-How-to-read-GNOME-shell-extension-source-code %})
   - [Locales on Ubuntu and how to set it in a Docker container]({% post_url /2022/2022-07-03-Ubuntu-Docker-locales %})
