@@ -107,6 +107,7 @@ The following sections are about concrete computer technologies. The articles ar
   - [How to read GNOME shell extension source code?]({% post_url /2022/2022-06-23-How-to-read-GNOME-shell-extension-source-code %})
   - [Locales on Ubuntu and how to set it in a Docker container]({% post_url /2022/2022-07-03-Ubuntu-Docker-locales %})
   - [A quick review of Linux udev]({% post_url /2022/2022-10-13-A-quick-review-of-udev %})
+  - [On Ubuntu 18.04, how is `/var/log/journal` created?]({% post_url /2022/2022-10-25-How-is-var-log-journal-created %})
 
 ## Network & Web
 
