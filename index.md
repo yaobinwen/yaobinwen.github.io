@@ -4,11 +4,10 @@ layout: default
 
 ## Learning to Learn
 
-As knowledge is becoming way more easily accessible than ever before, not to mention with the help of artificial intelligence such as ChatGPT, I think the ability of learning is becoming more important than memorizing the knowledge itself. Please don't get me wrong: I don't mean we should just leave all the knowledge on the Internet and only look it up when we need it. I mean we need to pay more attention to how to learn new knowledge more effectively and efficiently. Therefore, the first section of the blog is all about learning to learn.
+As knowledge is becoming way more easily accessible than ever before, not to mention with the help of artificial intelligence such as ChatGPT, I think the **ability of learning** is becoming more important than memorizing the knowledge itself. Please don't get me wrong: I don't mean we should just leave all the knowledge on the Internet and only look it up when we need it. I mean we need to pay more attention to how to learn new knowledge more effectively and efficiently. Therefore, the first section of the blog is all about learning to learn.
 
 - 2017
   - [Synergic Actions: Make the Best Use of Your Daily Life And Work]({% post_url /2017/2017-08-07-Synergic-actions %})
-  - [Book Summary: An Illustrated Book of Bad Arguments]({% post_url /2017/2017-09-09-Bad-Arguments %})
   - [读书笔记：《好好学习》]({% post_url /2017/2017-09-09-Study-Wisely %})
 - 2021
   - [Rethinking of Software Development Learning]({% post_url /2021/2021-01-27-Rethinking-of-software-dev-learning %})
@@ -23,6 +22,8 @@ As knowledge is becoming way more easily accessible than ever before, not to men
 
 I have been always afraid of and frustrated by mathematics. When I was in school, I just couldn't get the point of math and did pretty bad in all kinds of tests. As a result, I hated math and tried to avoid it as much as possible. I didn't really start to get interested in math until the senior year in college. When I reflected on how I learned mathematics, I realized it was because I wasn't learning math in the appropriate way with the appropriate mindset. Should I have done it appropriately when I was much younger, I may not at all suffer that much from learning this subject even though I may still not perform well in the tests. As a grown-up, I am trying to catch up the math learning I have fallen behind in my entire life. As a software developer, math can help me think more precisely and clearly.
 
+- 2017
+  - [Book Summary: An Illustrated Book of Bad Arguments]({% post_url /2017/2017-09-09-Bad-Arguments %})
 - 2022
   - [Why do we study matrices in linear algebra?]({% post_url /2022/2022-04-06-Why-study-matrices-in-linear-algebra %})
 - 2023
