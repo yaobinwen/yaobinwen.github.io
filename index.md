@@ -17,6 +17,7 @@ As knowledge is becoming way more easily accessible than ever before, not to men
 - 2023
   - [How to study a (thick) technical book?]({% post_url /2023/2023-02-20-How-to-study-a-thick-tech-book %})
   - [Make It Stick: How to use this book to improve learning?]({% post_url /2023/2023-03-26-Make-it-stick-how-to-use-this-book-to-improve-learning %})
+  - [Notes on the Feynman technique]({% post_url /2023/2023-05-21-The-Feynman-Technique %})
 
 ## Mathematics
 
