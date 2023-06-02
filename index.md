@@ -23,12 +23,20 @@ As knowledge is becoming way more easily accessible than ever before, not to men
 
 I have been always afraid of and frustrated by mathematics. When I was in school, I just couldn't get the point of math and did pretty bad in all kinds of tests. As a result, I hated math and tried to avoid it as much as possible. I didn't really start to get interested in math until the senior year in college. When I reflected on how I learned mathematics, I realized it was because I wasn't learning math in the appropriate way with the appropriate mindset. Should I have done it appropriately when I was much younger, I may not at all suffer that much from learning this subject even though I may still not perform well in the tests. As a grown-up, I am trying to catch up the math learning I have fallen behind in my entire life. As a software developer, math can help me think more precisely and clearly.
 
+- Linear Algebra:
+  - [Notes on _Linear Algebra Done Right_ (LaTex)](https://github.com/yaobinwen/robin_on_rails/blob/master/Mathematics/Linear-Algebra/Linear-Algebra-Done-Right/Notes.tex) (WIP as of 2023-06-02)
 - 2017
   - [Book Summary: An Illustrated Book of Bad Arguments]({% post_url /2017/2017-09-09-Bad-Arguments %})
 - 2022
   - [Why do we study matrices in linear algebra?]({% post_url /2022/2022-04-06-Why-study-matrices-in-linear-algebra %})
 - 2023
   - [What do we learn when we learn math?]({% post_url /2023/2023-03-24-What-do-we-learn-when-we-learn-math %})
+
+## Physics, Electrical Engineering, & Embedded Programming
+
+Honestly speaking, I've never developed enthusiasm in learning physics. However, I have enough passion to learn physics in order to understand electrical engineering and embedded programming. Therefore, these three disciplines are not separate ones to me (for now) and I will learn them altogether.
+
+My notes on physics and electrical engineering are [here](https://github.com/yaobinwen/robin_on_rails/blob/master/EE/EE.md) (WIP as of 2023-06-02).
 
 ---
 
