@@ -6,6 +6,8 @@ tags: [Tech]
 title: "SSH: Uniqueness of X509 Certificates Serial Numbers"
 ---
 
+(Updated on 2023-07-18)
+
 ## Overview
 
 I asked the question ["ssh-keygen: How to guarantee the uniqueness of serial numbers?"](https://security.stackexchange.com/q/246389/80050). This question has two parts:
@@ -21,10 +23,12 @@ If the serial numbers are used to sign certificates:
 - They must be unique across all the certificates that are signed by the same CA.
 - The certificates that are signed by different CAs can use the same serial numbers.
 
-If the serial numbers are not used to sign certificates, SSH would use `0` for all the certificates. `0` is not a valid serial number [1] so it makes no sense to talk about uniqueness in this case.
+If the serial numbers are not used to sign certificates, SSH would use `0` for all the certificates. `0` is not a valid serial number [Note 1] so it makes no sense to talk about uniqueness in this case.
 - `-I`, or key ID (or certificate ID), must always be specified, so revoked certificates can be identified by the key IDs.
 
-`ssh-keygen(1)` manual doesn't mention anything about how the serial numbers are guaranteed. I think it's up to the users to implement the solution. Simpliest, it can be a spreadsheet if the user only needs to manage a few certificates. A large organization may want to automate their own certificate signing process and use software to guarantee the uniqueness.
+`ssh-keygen(1)` manual doesn't mention anything about how the serial numbers are guaranteed. I think it's up to the users to implement the solution. In its simplest form, it can be a spreadsheet if the user only needs to manage a few certificates. A large organization may want to automate their own certificate signing process and use software to guarantee the uniqueness.
+
+Also see [Note 4]. Note 4 says serial numbers are not required when revoking a certificate, but it also agrees that without serial numbers, one has to revoke the entire key instead of one specific certificates. In other words, if one wants to implement finer-grained certificate revocation, serial numbers are needed.
 
 ## Test: Using Serial Numbers
 
@@ -47,9 +51,9 @@ To figure out the answer to the "whether" question, I set up the following envir
 
 I then set up three users and signed their certificates using serial numbers as follows:
 
-| Name | Signed by | Serial No. | Certificate Fingerprint [2] |
-|:----:|:---------:|:----------:|:---------------------------:|
-| alice | CA 1 | 10 [3] | `SHA256:j5IPf7RtoRzLbuPcFi35knX/4/ZIBL4m5tjclSEOQek` |
+| Name | Signed by | Serial No. | Certificate Fingerprint [Note 2] |
+|:----:|:---------:|:----------:|:--------------------------------:|
+| alice | CA 1 | 10 [Note 3] | `SHA256:j5IPf7RtoRzLbuPcFi35knX/4/ZIBL4m5tjclSEOQek` |
 | bob | CA 2 | 10 | `SHA256:+xTits76Rq9cwg5at0cHuQfPkbgvPyIP+252hyKcMCY` |
 | cassey | CA 1 | 10 | `SHA256:iyIeiiKZmcRUenQXjKi9M9Vw32fAZGyh6wztv8/TCBQ` |
 
@@ -152,10 +156,14 @@ When the serial numbers are not used for certificates, the key IDs (`-I`) are us
 
 ## Notes
 
-[1]: [`ssh-keygen(1)`](http://manpages.ubuntu.com/manpages/bionic/man1/ssh-keygen.1.html) says:
+- Note 1: [`ssh-keygen(1)`](http://manpages.ubuntu.com/manpages/bionic/man1/ssh-keygen.1.html) says:
 
 > Serial numbers are 64-bit values, not including zero and may be expressed in decimal, hex or octal.
 
-[2]: `ssh-keygen -l -f ./user/id_ecdsa-cert.pub`
+- Note 2: `ssh-keygen -l -f ./user/id_ecdsa-cert.pub`
+- Note 3: `10` is just an arbitrary number I picked. It doesn't have any special meaning.
+- Note 4: On 2023-06-16, user Jason Kohles replied in my question to provide additional information. In brief, his point is: Serial numbers are not required in order to use revocation lists, but using serial numbers can offer finer control over certificate revocation. As he said:
 
-[3]: `10` is just an arbitrary number I picked. It doesn't have any special meaning.
+> One example of this is in the case where a user certificate was signed with a set of restricted options and now you want to re-sign it with a different set of options. If you are not using serial numbers then for this to work you have to have the user generate a new key that you can sign with the new options, because without a serial number you can revoke based on the key, but that invalidates all certificates ever created from that key. If you are using serial numbers you can revoke only specific certificates from that key and allow the newer ones to continue to be valid.
+>
+> As far as ensuring uniqueness, since the serial number is a 64-bit integer I find the easiest solution is simply to use the current epoch time (perhaps in milliseconds if you feel you might someday need to issue more than one certificate per second).
