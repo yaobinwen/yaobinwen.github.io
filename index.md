@@ -38,6 +38,11 @@ Honestly speaking, I've never developed enthusiasm in learning physics. However,
 
 My notes on physics and electrical engineering are [here](https://github.com/yaobinwen/robin_on_rails/blob/master/EE/EE.md) (WIP as of 2023-06-02).
 
+## Computer Science Fundamentals
+
+- 2023
+  - [Representing signed numbers]({% post_url /2023/2023-07-30-Representing-signed-numbers %})
+
 ---
 
 The following sections are about concrete computer technologies. The articles are grouped by the main topics.
