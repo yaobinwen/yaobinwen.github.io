@@ -42,6 +42,7 @@ My notes on physics and electrical engineering are [here](https://github.com/yao
 
 - 2023
   - [Representing signed numbers]({% post_url /2023/2023-07-30-Representing-signed-numbers %})
+  - [Endianness]({% post_url /2023/2023-08-06-Endianness %})
 
 ---
 
