@@ -145,6 +145,8 @@ The following sections are about concrete computer technologies. The articles ar
 - 2020
   - [What is a "whitespace" in Python?]({% post_url /2020/2020-12-12-What-is-a-whitespace-in-Python %})
   - ["BrokenPipeError" in Python?]({% post_url /2020/2020-12-22-Python-BrokenPipeError %})
+- 2024
+  - [On GIL and thread safety in Python]({% post_url /2024/2024-01-26-On-thread-safety-in-Python %})
 
 ## Regular Expressions
 
