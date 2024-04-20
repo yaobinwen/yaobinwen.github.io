@@ -133,6 +133,8 @@ The following sections are about concrete computer technologies. The articles ar
 - 2022
   - [Why does Google Chrome automatically redirect `http://app` to `https://app` but doesn't do that to `http://app2` or `http://napp`?]({% post_url /2022/2022-02-18-Google-Chrome-http-app %})
   - [Google Chromium: Check out, build, and hack the code]({% post_url /2022/2022-06-17-Google-Chrome-build-and-run %})
+- 2024
+  - [HTTP 408 (Request Timeout) and browser auto-retry]({% post_url /2024/2024-04-19-HTTP-408-and-browser-retry %})
 
 ## Python
 
