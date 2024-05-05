@@ -69,6 +69,11 @@ The following sections are about concrete computer technologies. The articles ar
 - 2023
   - [AI and the guy who looked for food in trash bins]({% post_url /2023/2023-04-02-AI-and-the-guy-who-looked-for-food-in-trash-bins %})
 
+## C/C++
+
+- 2024:
+  - [Understanding stack unwinding (in C++)]({% post_url /2024/2024-05-05-Stack-unwinding-in-Cpp %})
+
 ## CMake
 
 - 2022:
