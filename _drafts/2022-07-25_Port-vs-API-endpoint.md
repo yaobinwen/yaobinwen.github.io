@@ -6,6 +6,12 @@ tags: [Tech]
 title: Ports vs API endpoints
 ---
 
+1. A house is like a computer.
+2. A house may have one or more doors to the outside world. These doors are like the network cards.
+3. A person living in the house is like a process in the computer.
+4. The OS is like the house butler.
+5. When Ada in house 1 wants to send a mail to Bob in house 2, she gives the mail to the house 1 butler.
+
 My friend asked me about "ports" and "API endpoints" because she got confused by them a little bit. This article is an extended answer to the question.
 
 First of all, we need to understand what a "port" is, and in order to understand that, we need to go back to the time when network was not invented yet - in other words, the time when people still used computers locally.
