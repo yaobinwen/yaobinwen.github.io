@@ -38,6 +38,9 @@ Honestly speaking, I've never developed enthusiasm in learning physics. However,
 
 My notes on physics and electrical engineering are [here](https://github.com/yaobinwen/robin_on_rails/blob/master/EE/EE.md) (WIP as of 2023-06-02).
 
+- 2024
+  - [Understanding why memory alignment is needed from the hardware perspective]({% post_url /2024/2024-07-14-Why-memory-alignment-is-needed %})
+
 ## Computer Science Fundamentals
 
 - 2023
