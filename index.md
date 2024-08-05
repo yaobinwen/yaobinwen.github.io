@@ -64,6 +64,8 @@ The following sections are about concrete computer technologies. The articles ar
   - [Ansible: Develop and Debug]({% post_url /2022/2022-12-23-Ansible-develop-and-debug %})
   - [Ansible: How to display a role's path]({% post_url /2022/2022-12-23-Ansible-display-role-path %})
   - [Ansible: How `check_mode` is set]({% post_url /2022/2022-12-23-Ansible-check-mode %})
+- 2024:
+  - [Ansible: Understanding how a loop gets the items]({% post_url /2024/2024-08-05-Ansible-loop-items %})
 
 ## Artificial Intelligence
 
