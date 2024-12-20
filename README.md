@@ -6,11 +6,11 @@ I'm using [_The Hacker theme_](https://github.com/pages-themes/hacker).
 
 ## Build & Serve
 
-Run `./build-serve.sh` to build the site and serve locally.
+Run `./build-and-serve.sh` to build the site and serve locally.
 
 Notes:
 - 1. I'm building my own `ruby` Docker images in order to build and serve locally for local development.
-- 2. The script `build-serve.sh` does everything: build the customized Docker image and run `jekyll serve` appropriately.
+- 2. The script `build-and-serve.sh` does everything: build the customized Docker image and run `jekyll serve` appropriately.
 
 ## Various Issues
 
