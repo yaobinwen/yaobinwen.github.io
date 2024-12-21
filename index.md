@@ -115,6 +115,8 @@ The following sections are about concrete computer technologies. The articles ar
 
 - 2021
   - [A Process for Complicated Git Merges]({% post_url /2021/2021-10-14-A-process-for-complicated-git-merges %})
+- 2024
+  - [`git-rebase`: A case study]({% post_url /2024/2024-12-19-git-rebase-a-case-study %})
 
 ## Linux (Mostly Debian/Ubuntu)
 
