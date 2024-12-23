@@ -137,6 +137,8 @@ The following sections are about concrete computer technologies. The articles ar
   - [Locales on Ubuntu and how to set it in a Docker container]({% post_url /2022/2022-07-03-Ubuntu-Docker-locales %})
   - [A quick review of Linux udev]({% post_url /2022/2022-10-13-A-quick-review-of-udev %})
   - [On Ubuntu 18.04, how is `/var/log/journal` created?]({% post_url /2022/2022-10-25-How-is-var-log-journal-created %})
+- 2024
+  - [How to get the total physical RAM on Ubuntu: sounds easy, but not really]({% post_url /2024/2024-12-20-Total-physical-RAM %})
 
 ## Network & Web
 
