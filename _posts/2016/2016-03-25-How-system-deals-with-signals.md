@@ -43,19 +43,208 @@ posix_system(PyObject *self, PyObject *args)
 
 ([This question](http://stackoverflow.com/questions/14613223/python-os-library-source-code-location) shows where to find the source code.)
 
-In glibc, C's ```system()``` function is an alias of ```do_system()``` function which is implemented with the calls to fork(), execl() and waitpid(), as shown in [its source code](http://code.metager.de/source/xref/gnu/glibc/sysdeps/posix/system.c).
+In glibc, C's ```system()``` function is an alias of ```do_system()``` function which is implemented with the calls to fork(), execl() and waitpid(), as shown in [its source code](https://github.com/lattera/glibc/blob/master/sysdeps/posix/system.c) as follows:
+
+```c
+/* Execute LINE as a shell command, returning its status.  */
+static int
+do_system (const char *line)
+{
+  int status, save;
+  pid_t pid;
+  struct sigaction sa;
+#ifndef _LIBC_REENTRANT
+  struct sigaction intr, quit;
+#endif
+  sigset_t omask;
+
+  sa.sa_handler = SIG_IGN;
+  sa.sa_flags = 0;
+  __sigemptyset (&sa.sa_mask);
+
+  DO_LOCK ();
+  if (ADD_REF () == 0)
+    {
+      if (__sigaction (SIGINT, &sa, &intr) < 0)
+	{
+	  (void) SUB_REF ();
+	  goto out;
+	}
+      if (__sigaction (SIGQUIT, &sa, &quit) < 0)
+	{
+	  save = errno;
+	  (void) SUB_REF ();
+	  goto out_restore_sigint;
+	}
+    }
+  DO_UNLOCK ();
+
+  /* We reuse the bitmap in the 'sa' structure.  */
+  __sigaddset (&sa.sa_mask, SIGCHLD);
+  save = errno;
+  if (__sigprocmask (SIG_BLOCK, &sa.sa_mask, &omask) < 0)
+    {
+#ifndef _LIBC
+      if (errno == ENOSYS)
+	__set_errno (save);
+      else
+#endif
+	{
+	  DO_LOCK ();
+	  if (SUB_REF () == 0)
+	    {
+	      save = errno;
+	      (void) __sigaction (SIGQUIT, &quit, (struct sigaction *) NULL);
+	    out_restore_sigint:
+	      (void) __sigaction (SIGINT, &intr, (struct sigaction *) NULL);
+	      __set_errno (save);
+	    }
+	out:
+	  DO_UNLOCK ();
+	  return -1;
+	}
+    }
+
+#ifdef CLEANUP_HANDLER
+  CLEANUP_HANDLER;
+#endif
+
+#ifdef FORK
+  pid = FORK ();
+#else
+  pid = __fork ();
+#endif
+  if (pid == (pid_t) 0)
+    {
+      /* Child side.  */
+      const char *new_argv[4];
+      new_argv[0] = SHELL_NAME;
+      new_argv[1] = "-c";
+      new_argv[2] = line;
+      new_argv[3] = NULL;
+
+      /* Restore the signals.  */
+      (void) __sigaction (SIGINT, &intr, (struct sigaction *) NULL);
+      (void) __sigaction (SIGQUIT, &quit, (struct sigaction *) NULL);
+      (void) __sigprocmask (SIG_SETMASK, &omask, (sigset_t *) NULL);
+      INIT_LOCK ();
+
+      /* Exec the shell.  */
+      (void) __execve (SHELL_PATH, (char *const *) new_argv, __environ);
+      _exit (127);
+    }
+  else if (pid < (pid_t) 0)
+    /* The fork failed.  */
+    status = -1;
+  else
+    /* Parent side.  */
+    {
+      /* Note the system() is a cancellation point.  But since we call
+	 waitpid() which itself is a cancellation point we do not
+	 have to do anything here.  */
+      if (TEMP_FAILURE_RETRY (__waitpid (pid, &status, 0)) != pid)
+	status = -1;
+    }
+
+#ifdef CLEANUP_HANDLER
+  CLEANUP_RESET;
+#endif
+
+  save = errno;
+  DO_LOCK ();
+  if ((SUB_REF () == 0
+       && (__sigaction (SIGINT, &intr, (struct sigaction *) NULL)
+	   | __sigaction (SIGQUIT, &quit, (struct sigaction *) NULL)) != 0)
+      || __sigprocmask (SIG_SETMASK, &omask, (sigset_t *) NULL) != 0)
+    {
+#ifndef _LIBC
+      /* glibc cannot be used on systems without waitpid.  */
+      if (errno == ENOSYS)
+	__set_errno (save);
+      else
+#endif
+	status = -1;
+    }
+  DO_UNLOCK ();
+
+  return status;
+}
+```
 
 The source code shows that the SIGINT and SIGQUIT are both ignored:
 
-- ```Line 58```: A signal action ```sa``` is defined.
-- ```Line 64```: ```sa```'s handler is assigned to [```SIG_IGN```](http://code.metager.de/source/xref/gnu/gcc/fixincludes/tests/base/sys/signal.h).
-- ```Line 68 ~ 83```: Ignore the ```SIGINT``` and ```SIGQUIT```.
+- The line `struct sigaction sa;` defines a signal action.
+- The line `sa.sa_handler = SIG_IGN;` assigns the special value `SIG_IGN` to the handler of this signal action. According to [POSIX](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/signal.h.html), `SIG_IGN` means "Request that signal be ignored." Therefore, the signal that's handled by this handler is effectively ignored.
+- The lines `__sigaction (SIGINT, &sa, &intr)` and `__sigaction (SIGQUIT, &sa, &quit)` mean that we want to handle the signals `SIGINT` and `SIGQUIT` using the handler `sa`. Because `sa` is defined to ignore the signal, these lines effectively ignore the signals `SIGINT` and `SIGQUIT`.
 
-The lines in ```Line 115 ~ 119``` spawn a new child process. On the child side, the normal handling of ```SIGINT``` and ```SIGQUIT``` is restored, and then ```__execve()``` is called to run the specified program.
+The following lines spawns a new child process.
 
-However, on the parent side, which is also the side which initiated the ```do_system()``` call, the handling of these two signals are not restored. Shortly, it calls the ```__waitpid()``` to wait for the completion of the just-spawned child process.
+```c
+#ifdef FORK
+  pid = FORK ();
+#else
+  pid = __fork ();
+#endif
+```
 
-After the child process is completed, the normal signal handling is restored in the parent process, as shown in ```Line 157 ~ 171```.
+On the child side as shown in the code below, the normal handling of `SIGINT` and `SIGQUIT` is restored, and then `__execve` is called to run the specified program. If the program is run successfully, the line `_exit (127)` should never be reached. Therefore, if anything goes wrong with running the specified program, `_exit (127)` is run to tell the caller that the specified program fails to be launched.
+
+```c
+  if (pid == (pid_t) 0)
+    {
+      /* Child side.  */
+      const char *new_argv[4];
+      new_argv[0] = SHELL_NAME;
+      new_argv[1] = "-c";
+      new_argv[2] = line;
+      new_argv[3] = NULL;
+
+      /* Restore the signals.  */
+      (void) __sigaction (SIGINT, &intr, (struct sigaction *) NULL);
+      (void) __sigaction (SIGQUIT, &quit, (struct sigaction *) NULL);
+      (void) __sigprocmask (SIG_SETMASK, &omask, (sigset_t *) NULL);
+      INIT_LOCK ();
+
+      /* Exec the shell.  */
+      (void) __execve (SHELL_PATH, (char *const *) new_argv, __environ);
+      _exit (127);
+    }
+    /* ... */
+```
+
+However, on the parent side in the code below, which is also the side which initiated the ```do_system()``` call, the handling of these two signals are not restored. Shortly, it calls the `__waitpid()` to wait for the completion of the just-spawned child process.
+
+```c
+  else
+    /* Parent side.  */
+    {
+      /* Note the system() is a cancellation point.  But since we call
+	 waitpid() which itself is a cancellation point we do not
+	 have to do anything here.  */
+      if (TEMP_FAILURE_RETRY (__waitpid (pid, &status, 0)) != pid)
+	status = -1;
+    }
+```
+
+After the child process is completed, the normal signal handling is restored in the parent process, as shown in the following code:
+
+```c
+  DO_LOCK ();
+  if ((SUB_REF () == 0
+       && (__sigaction (SIGINT, &intr, (struct sigaction *) NULL)
+	   | __sigaction (SIGQUIT, &quit, (struct sigaction *) NULL)) != 0)
+      || __sigprocmask (SIG_SETMASK, &omask, (sigset_t *) NULL) != 0)
+    {
+#ifndef _LIBC
+      /* glibc cannot be used on systems without waitpid.  */
+      if (errno == ENOSYS)
+	__set_errno (save);
+      else
+#endif
+	status = -1;
+    }
+  DO_UNLOCK ();
+```
 
 ## References
 
