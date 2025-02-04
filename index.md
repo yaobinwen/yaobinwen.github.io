@@ -163,6 +163,8 @@ The following sections are about concrete computer technologies. The articles ar
   - ["BrokenPipeError" in Python?]({% post_url /2020/2020-12-22-Python-BrokenPipeError %})
 - 2024
   - [On GIL and thread safety in Python]({% post_url /2024/2024-01-26-On-thread-safety-in-Python %})
+- 2025
+  - [When do Python decorators get called?]({% post_url /2025/2025-02-04-When-Python-decorators-get-called %})
 
 ## Regular Expressions
 
